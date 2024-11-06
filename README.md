@@ -21,5 +21,5 @@ pip install "fastapi[standard]"
 ```
 2. start local server
 ```
-fastapi dev hkia.py
+fastapi dev server.py
 ```
