@@ -29,9 +29,6 @@ export default function Navbar() {
             <Button variant="ghost" className={`nav-button ${location.pathname === '/market' ? 'active' : ''}`}>
               <a href="/market">Market Analysis</a>
             </Button>
-            <Button variant="ghost" className={`nav-button ${location.pathname === '/alerts' ? 'active' : ''}`}>
-              <a href="/alerts">Alerts</a>
-            </Button>
           </HStack>
         </Flex>
       </Flex>
