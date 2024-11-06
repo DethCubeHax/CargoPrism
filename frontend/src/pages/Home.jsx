@@ -33,6 +33,16 @@ function Home() {
     datasets: []
   });
 
+  const [performanceData, setPerformanceData] = useState({
+    labels: [],
+    datasets: []
+  });
+
+  const [top10Data, setTop10Data] = useState({
+    labels: [],
+    datasets: []
+  });
+
   useEffect(() => {
     fetch('http://localhost:8000/overview', {
       method: 'GET',
@@ -61,31 +71,36 @@ function Home() {
             }
           ]
         });
+        setPerformanceData({
+          labels: data.dates,
+          datasets: [
+            {
+              label: 'CX',
+              data: data.CX_weekly_cod_percentage,
+              ...chartTheme.datasetStyles.bar
+            },
+            {
+              label: 'All',
+              data: data.ALL_weekly_cod_percentag,
+              ...chartTheme.datasetStyles.bar
+            }
+          ]
+        });
+        setTop10Data({
+          labels: data.Name_top_10,
+          datasets: [
+            {
+              label: 'Top 10 Routes',
+              data: data.Value_top_10,
+              ...chartTheme.datasetStyles.bar
+            }
+          ]
+        });
       })
       .catch(error => {
         console.error('Error fetching data:', error);
       });
   }, []);
-
-  const delayData = {
-    labels: ['0-15', '15-30', '30-60', '60-120', '120+'],
-    datasets: [{
-      label: 'Delay Distribution (minutes)',
-      data: [45, 25, 15, 10, 5],
-      ...chartTheme.datasetStyles.bar
-    }]
-  };
-
-  const growthData = {
-    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
-    datasets: [{
-      label: 'Flight Frequency Growth',
-      data: [100, 105, 108, 110, 112, 115],
-      tension: 0.3,
-      fill: true,
-      ...chartTheme.datasetStyles.line
-    }]
-  };
 
   const cancellationData = {
     labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -100,7 +115,7 @@ function Home() {
 
   return (
     <div className="detail-wrapper">
-      <h1 className="dashboard-title">Air Cargo Operations Overview</h1>
+      <h1 className="dashboard-title">Air Cargo Operations Weekly Overview</h1>
       
       <div className="metrics-container">
         <div className="metrics">
@@ -132,16 +147,16 @@ function Home() {
         </div>
 
         <div className="chart-container">
-          <h2>Delay Distribution</h2>
+          <h2>Performance (Cancelled or Delayed)</h2>
           <div className="chart">
-            <Bar data={delayData} options={chartTheme.defaultOptions} />
+            <Line data={performanceData} options={chartTheme.defaultOptions} />
           </div>
         </div>
 
         <div className="chart-container">
-          <h2>Weekly Growth Trend</h2>
+          <h2>Weekly Top 10</h2>
           <div className="chart">
-            <Line data={growthData} options={chartTheme.defaultOptions} />
+            <Bar data={top10Data} options={chartTheme.defaultOptions} />
           </div>
         </div>
 

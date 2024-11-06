@@ -41,11 +41,33 @@ def overview():
         # Resampling and calculating weekly frequency
         cx_weekly_counts = df[df['airline'] == 'CPA'].resample('W').size()
         all_weekly_counts = df.resample('W').size()
+        # weekly_unique_airlines = df.resample('W').apply(lambda x: x['airline'].nunique())
+        # avg_weekly_counts = all_weekly_counts/weekly_unique_airlines
+
+        # weekly perfomance: cod (cancelled or delayed) flights
+        condition_cx_cod = (df['airline'] == 'CPA') & (df['status'].isin(['Cancelled', 'Delayed']))
+        cx_weekly_cod_flights = df[condition_cx_cod].resample('W').size()
+        cx_cod_percentage = ((cx_weekly_cod_flights / cx_weekly_counts.replace(0, pd.NA)) * 100).fillna(0)
+        weekly_cod_flights = df[df['status'].isin(['Cancelled', 'Delayed'])].resample('W').size()
+        all_cod_percentage = ((weekly_cod_flights/all_weekly_counts.replace(0, pd.NA))*100).fillna(0)
+
+        # weekly top 10
+        weekly_top_10 = df['airline'].resample('W').apply(
+            lambda x: x.value_counts().head(10).to_dict()
+        )
         
         # Preparing data for JSON serialization
         return {
             "dates": cx_weekly_counts.index.strftime('%Y-%m-%d').tolist(),  # Format dates as strings
+            # Weekly Freq Table
             "CX_weekly_fq": cx_weekly_counts.tolist(),
-            "ALL_weekly_fq": all_weekly_counts.tolist()
+            "ALL_weekly_fq": all_weekly_counts.tolist(),
+            # Weekly Performance Table
+            "CX_weekly_cod_percentage": cx_cod_percentage.tolist(),
+            "ALL_weekly_cod_percentage": all_cod_percentage.tolist(),
+            # Weekly Top 10 Table
+            "Name_top_10": [list(week.keys()) for week in weekly_top_10],
+            "Value_top_10": [list(week.values()) for week in weekly_top_10]
+
         }
     
