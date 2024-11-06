@@ -1,0 +1,36 @@
+.container {
+    padding: 40px;
+    margin: auto;
+    width: 40%;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+.pagination a {
+    padding: 10px;
+    border: 1px solid rgb(137, 203, 243);
+    color: rgb(137, 203, 243);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.pagination__link {
+    font-weight: bold;
+}
+
+.pagination__link--active a {
+    color: #fff;
+    background: rgb(137, 203, 243);
+}
+
+.pagination__link--disabled a {
+    color: rgb(198,197,202);
+    border: 1px solid rgb(198,197,202);
+}
