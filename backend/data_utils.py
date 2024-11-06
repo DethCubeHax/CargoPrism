@@ -7,7 +7,7 @@ import os
 def get_airport_data():
     """Load airport data from iata.json"""
     try:
-        with open('iata.json') as f:
+        with open('iata.json', encoding='utf-8') as f:
             airports = json.load(f)
             return {airport['iata_code']: airport['name'] for airport in airports}
     except FileNotFoundError:
