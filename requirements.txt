@@ -1,0 +1,4 @@
+fastapi[standard]
+pandas
+requests
+matplotlib

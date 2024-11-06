@@ -26,6 +26,7 @@ ChartJS.register(
   Legend
 );
 
+
 function Home() {
   const [frequencyData, setFrequencyData] = useState({
     labels: [],
@@ -33,9 +34,18 @@ function Home() {
   });
 
   useEffect(() => {
-    fetch('/overview')
-      .then(response => response.json())
+    fetch('http://localhost:8000/overview', {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+      },
+    })
+      .then(response => {
+        console.log('Raw Response:', response);
+        return response.json();
+      })
       .then(data => {
+        console.log('Received data:', data);
         setFrequencyData({
           labels: data.dates,
           datasets: [
@@ -52,7 +62,9 @@ function Home() {
           ]
         });
       })
-      .catch(error => console.error('Failed to fetch data:', error));
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
   }, []);
 
   const delayData = {

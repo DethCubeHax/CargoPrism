@@ -1,8 +1,19 @@
 from fastapi import FastAPI
-import pandas as pd
+from fastapi.middleware.cors import CORSMiddleware
 from flight_service import update_flights_database
+from datetime import datetime, timedelta
+import pandas as pd
 
 app = FastAPI()
+
+# Add CORS middleware configuration
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # More permissive - allows all origins
+    allow_credentials=False,  # Changed to False since we're using allow_origins=["*"]
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/hkia")
 def hkia():
