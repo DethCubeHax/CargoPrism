@@ -1,4 +1,303 @@
 date,time,flight_no,airline,origin,destination,origin_name,destination_name,status,flight_type,datetime
+2024-11-03,05:30,MA 532,EAU,SHJ,HKG,Sharjah International Airport,Hong Kong International Airport,Est at 04:15 (07/11/2024),arrival,2024-11-03 05:30:00
+2024-11-05,03:50,ET 3790,ETH,ADD,HKG,Addis Ababa Bole International Airport,Hong Kong International Airport,Est at 02:20 (07/11/2024),arrival,2024-11-05 03:50:00
+2024-11-05,12:00,5Y 8051,GTI,MIA,HKG,Miami International Airport,Hong Kong International Airport,Cancelled,arrival,2024-11-05 12:00:00
+2024-11-05,13:45,CT 1012,AAE,VCV,HKG,Southern California Logistics Airport,Hong Kong International Airport,Est at 16:45 (07/11/2024),arrival,2024-11-05 13:45:00
+2024-11-06,07:30,MB 183,MNB,KGF,HKG,Sary-Arka Airport,Hong Kong International Airport,Est at 04:48 (07/11/2024),arrival,2024-11-06 07:30:00
+2024-11-06,16:55,SV 3960,SVA,RUH,HKG,King Khaled International Airport,Hong Kong International Airport,Est at 05:55 (07/11/2024),arrival,2024-11-06 16:55:00
+2024-11-06,22:55,CX 3089,CPA,NLU,HKG,Santa Lucía Air Force Base / General Felipe Ángeles International Airport,Hong Kong International Airport,Est at 04:29 (07/11/2024),arrival,2024-11-06 22:55:00
+2024-11-06,23:00,FX 9791,FDX,ORD,HKG,Chicago O'Hare International Airport,Hong Kong International Airport,At gate 00:15 (07/11/2024),arrival,2024-11-06 23:00:00
+2024-11-06,23:20,ES 723,DHX,BAH,HKG,Bahrain International Airport,Hong Kong International Airport,Est at 00:33 (07/11/2024),arrival,2024-11-06 23:20:00
+2024-11-06,23:40,CV 7332,CLX,LUX,HKG,Luxembourg-Findel International Airport,Hong Kong International Airport,Est at 01:10 (07/11/2024),arrival,2024-11-06 23:40:00
+2024-11-06,23:50,RH 318,HKC,HAN,HKG,Noi Bai International Airport,Hong Kong International Airport,Est at 02:20 (07/11/2024),arrival,2024-11-06 23:50:00
+2024-11-07,00:10,TH 6826,RMY,KCH,HKG,Kuching International Airport,Hong Kong International Airport,Cancelled,arrival,2024-11-07 00:10:00
+2024-11-07,00:10,CX 3242,CPA,CGK,HKG,Soekarno-Hatta International Airport,Hong Kong International Airport,At gate 00:09,arrival,2024-11-07 00:10:00
+2024-11-07,00:20,LD 681,AHK,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,Landed 00:11,arrival,2024-11-07 00:20:00
+2024-11-07,00:25,K4 283,CKS,LAX,HKG,Los Angeles International Airport,Hong Kong International Airport,At gate 23:59 (06/11/2024),arrival,2024-11-07 00:25:00
+2024-11-07,00:30,KZ 203,NCA,NRT,HKG,Narita International Airport,Hong Kong International Airport,Landed 00:13,arrival,2024-11-07 00:30:00
+2024-11-07,00:35,TH 3092,RMY,PEN,HKG,Penang International Airport,Hong Kong International Airport,Est at 00:19,arrival,2024-11-07 00:35:00
+2024-11-07,00:45,EK 9278,UAE,DXB,HKG,Dubai International Airport,Hong Kong International Airport,Est at 04:06,arrival,2024-11-07 00:45:00
+2024-11-07,00:45,SV 982,SVA,RUH,HKG,King Khaled International Airport,Hong Kong International Airport,Est at 05:05,arrival,2024-11-07 00:45:00
+2024-11-07,00:45,LD 129,AHK,ICN,HKG,Incheon International Airport,Hong Kong International Airport,Est at 00:49,arrival,2024-11-07 00:45:00
+2024-11-07,00:45,LD 456,AHK,CEB,HKG,Mactan Cebu International Airport,Hong Kong International Airport,Est at 01:28,arrival,2024-11-07 00:45:00
+2024-11-07,00:50,HJ 021,TMN,SYD,HKG,Sydney Kingsford Smith International Airport,Hong Kong International Airport,Est at 00:20,arrival,2024-11-07 00:50:00
+2024-11-07,01:00,LD 205,AHK,KIX,HKG,Kansai International Airport,Hong Kong International Airport,Est at 00:55,arrival,2024-11-07 01:00:00
+2024-11-07,01:00,CI 5835,CAL,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,Est at 00:31,arrival,2024-11-07 01:00:00
+2024-11-07,01:10,LD 721,AHK,CTU,HKG,Chengdu Shuangliu International Airport,Hong Kong International Airport,Est at 00:49,arrival,2024-11-07 01:10:00
+2024-11-07,01:10,LD 769,AHK,PEK,HKG,Beijing Capital International Airport,Hong Kong International Airport,Est at 01:08,arrival,2024-11-07 01:10:00
+2024-11-07,01:10,NH 8511,ANA,NRT,HKG,Narita International Airport,Hong Kong International Airport,Est at 00:36,arrival,2024-11-07 01:10:00
+2024-11-07,01:15,LD 217,AHK,NGO,HKG,Chubu Centrair International Airport,Hong Kong International Airport,Est at 00:59,arrival,2024-11-07 01:15:00
+2024-11-07,01:20,LD 562,AHK,SGN,HKG,Tan Son Nhat International Airport,Hong Kong International Airport,Est at 01:24,arrival,2024-11-07 01:20:00
+2024-11-07,01:20,8K 525,KMI,BKK,HKG,Suvarnabhumi Airport,Hong Kong International Airport,Est at 01:23,arrival,2024-11-07 01:20:00
+2024-11-07,01:25,KE 313,KAL,ICN,HKG,Incheon International Airport,Hong Kong International Airport,Est at 01:12,arrival,2024-11-07 01:25:00
+2024-11-07,01:25,LD 326,AHK,SIN,HKG,Singapore Changi Airport,Hong Kong International Airport,Est at 02:01,arrival,2024-11-07 01:25:00
+2024-11-07,01:25,LD 783,AHK,PVG,HKG,Shanghai Pudong International Airport,Hong Kong International Airport,Est at 01:00,arrival,2024-11-07 01:25:00
+2024-11-07,01:25,LD 842,AHK,BKK,HKG,Suvarnabhumi Airport,Hong Kong International Airport,Est at 01:13,arrival,2024-11-07 01:25:00
+2024-11-07,01:30,TH 3507,RMY,KUL,HKG,Kuala Lumpur International Airport,Hong Kong International Airport,Est at 01:31,arrival,2024-11-07 01:30:00
+2024-11-07,01:30,BR 6535,EVA,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,Est at 01:21,arrival,2024-11-07 01:30:00
+2024-11-07,01:30,LD 209,AHK,NRT,HKG,Narita International Airport,Hong Kong International Airport,Est at 01:08,arrival,2024-11-07 01:30:00
+2024-11-07,02:00,2Y 6012,MYU,CGK,HKG,Soekarno-Hatta International Airport,Hong Kong International Airport,Est at 01:57,arrival,2024-11-07 02:00:00
+2024-11-07,02:05,ES 697,DHX,BAH,HKG,Bahrain International Airport,Hong Kong International Airport,,arrival,2024-11-07 02:05:00
+2024-11-07,02:20,ET 3790,ETH,LGG,HKG,Liège Airport,Hong Kong International Airport,Cancelled,arrival,2024-11-07 02:20:00
+2024-11-07,02:45,OZ 967,AAR,ICN,HKG,Incheon International Airport,Hong Kong International Airport,Est at 18:05,arrival,2024-11-07 02:45:00
+2024-11-07,02:45,5X 004,UPS,PHL,HKG,Philadelphia International Airport,Hong Kong International Airport,Est at 02:34,arrival,2024-11-07 02:45:00
+2024-11-07,02:55,ES 779,DHX,BAH,HKG,Bahrain International Airport,Hong Kong International Airport,,arrival,2024-11-07 02:55:00
+2024-11-07,03:30,3S 514,BOX,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,Est at 07:15,arrival,2024-11-07 03:30:00
+2024-11-07,03:40,ES 725,DHX,BAH,HKG,Bahrain International Airport,Hong Kong International Airport,Cancelled,arrival,2024-11-07 03:40:00
+2024-11-07,03:45,QY 534,BCS,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,Est at 03:32,arrival,2024-11-07 03:45:00
+2024-11-07,03:55,5Y 8523,GTI,HAN,HKG,Noi Bai International Airport,Hong Kong International Airport,Est at 05:15,arrival,2024-11-07 03:55:00
+2024-11-07,04:00,QY 546,BCS,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,Est at 03:51,arrival,2024-11-07 04:00:00
+2024-11-07,04:20,CC 1008,ABD,MAD,HKG,Adolfo Suárez Madrid–Barajas Airport,Hong Kong International Airport,Cancelled,arrival,2024-11-07 04:20:00
+2024-11-07,04:30,FX 5025,FDX,KIX,HKG,Kansai International Airport,Hong Kong International Airport,,arrival,2024-11-07 04:30:00
+2024-11-07,04:30,RH 4569,HKC,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,Est at 16:20,arrival,2024-11-07 04:30:00
+2024-11-07,04:40,CX 3142,CPA,DEL,HKG,Indira Gandhi International Airport,Hong Kong International Airport,Est at 05:13,arrival,2024-11-07 04:40:00
+2024-11-07,04:50,3V 516,TAY,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,,arrival,2024-11-07 04:50:00
+2024-11-07,04:50,K4 614,CKS,ORD,HKG,Chicago O'Hare International Airport,Hong Kong International Airport,Est at 08:35,arrival,2024-11-07 04:50:00
+2024-11-07,04:50,N8 544,NCR,BHX,HKG,Birmingham International Airport,Hong Kong International Airport,Est at 06:04,arrival,2024-11-07 04:50:00
+2024-11-07,04:55,CK 263,CKK,PVG,HKG,Shanghai Pudong International Airport,Hong Kong International Airport,,arrival,2024-11-07 04:55:00
+2024-11-07,05:15,CX 040,CPA,BOM,HKG,Chhatrapati Shivaji International Airport,Hong Kong International Airport,,arrival,2024-11-07 05:15:00
+2024-11-07,05:25,QR 8058,QTR,DOH,HKG,Hamad International Airport,Hong Kong International Airport,,arrival,2024-11-07 05:25:00
+2024-11-07,05:35,EY 947,ETD,AUH,HKG,Abu Dhabi International Airport,Hong Kong International Airport,Est at 06:06,arrival,2024-11-07 05:35:00
+2024-11-07,05:45,O3 337,CSS,EHU,HKG,Ezhou Huahu Airport (under construction),Hong Kong International Airport,Est at 06:55,arrival,2024-11-07 05:45:00
+2024-11-07,05:55,K4 612,CKS,CVG,HKG,Cincinnati Northern Kentucky International Airport,Hong Kong International Airport,Est at 07:00,arrival,2024-11-07 05:55:00
+2024-11-07,06:05,ET 3614,ETH,BRU,HKG,Brussels Airport,Hong Kong International Airport,,arrival,2024-11-07 06:05:00
+2024-11-07,06:20,CX 3248,CPA,HAN,HKG,Noi Bai International Airport,Hong Kong International Airport,,arrival,2024-11-07 06:20:00
+2024-11-07,06:20,3S 580,BOX,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,,arrival,2024-11-07 06:20:00
+2024-11-07,06:50,O3 267,CSS,NGB,HKG,Ningbo Lishe International Airport,Hong Kong International Airport,Est at 08:55,arrival,2024-11-07 06:50:00
+2024-11-07,06:55,RH 326,HKC,LGG,HKG,Liège Airport,Hong Kong International Airport,Est at 09:40,arrival,2024-11-07 06:55:00
+2024-11-07,07:00,RH 352,HKC,MNL,HKG,Ninoy Aquino International Airport,Hong Kong International Airport,Est at 06:10,arrival,2024-11-07 07:00:00
+2024-11-07,07:00,EK 9832,UAE,DWC,HKG,Al Maktoum International Airport,Hong Kong International Airport,Est at 05:13,arrival,2024-11-07 07:00:00
+2024-11-07,07:15,CX 2061,CPA,CTU,HKG,Chengdu Shuangliu International Airport,Hong Kong International Airport,,arrival,2024-11-07 07:15:00
+2024-11-07,07:30,OZ 954,AAR,ICN,HKG,Incheon International Airport,Hong Kong International Airport,,arrival,2024-11-07 07:30:00
+2024-11-07,08:05,5X 067,UPS,SDF,HKG,Louisville Muhammad Ali International Airport,Hong Kong International Airport,,arrival,2024-11-07 08:05:00
+2024-11-07,08:15,5Y 9193,GTI,LAS,HKG,McCarran International Airport,Hong Kong International Airport,Est at 09:23,arrival,2024-11-07 08:15:00
+2024-11-07,08:15,CX 3116,CPA,MAA,HKG,Chennai International Airport,Hong Kong International Airport,,arrival,2024-11-07 08:15:00
+2024-11-07,08:45,RH 365,HKC,STN,HKG,London Stansted Airport,Hong Kong International Airport,Est at 14:30,arrival,2024-11-07 08:45:00
+2024-11-07,09:15,CV 4963,CLX,LUX,HKG,Luxembourg-Findel International Airport,Hong Kong International Airport,Est at 18:15,arrival,2024-11-07 09:15:00
+2024-11-07,09:15,SQ 7952,SIA,SIN,HKG,Singapore Changi Airport,Hong Kong International Airport,,arrival,2024-11-07 09:15:00
+2024-11-07,09:25,CV 7623,CLX,LUX,HKG,Luxembourg-Findel International Airport,Hong Kong International Airport,Est at 10:25,arrival,2024-11-07 09:25:00
+2024-11-07,09:30,5Y 8701,GTI,MIA,HKG,Miami International Airport,Hong Kong International Airport,Est at 10:29,arrival,2024-11-07 09:30:00
+2024-11-07,09:30,CX 085,CPA,JFK,HKG,John F Kennedy International Airport,Hong Kong International Airport,Est at 08:39,arrival,2024-11-07 09:30:00
+2024-11-07,10:00,T8 4705,TVR,RUH,HKG,King Khaled International Airport,Hong Kong International Airport,,arrival,2024-11-07 10:00:00
+2024-11-07,10:00,ET 3600,ETH,ADD,HKG,Addis Ababa Bole International Airport,Hong Kong International Airport,Est at 08:35,arrival,2024-11-07 10:00:00
+2024-11-07,10:00,7L 647,AZG,GYD,HKG,Heydar Aliyev International Airport,Hong Kong International Airport,,arrival,2024-11-07 10:00:00
+2024-11-07,10:00,EK 9824,UAE,SYD,HKG,Sydney Kingsford Smith International Airport,Hong Kong International Airport,Est at 09:23,arrival,2024-11-07 10:00:00
+2024-11-07,10:15,5Y 8028,GTI,MIA,HKG,Miami International Airport,Hong Kong International Airport,Cancelled,arrival,2024-11-07 10:15:00
+2024-11-07,10:20,EK 9786,UAE,DWC,HKG,Al Maktoum International Airport,Hong Kong International Airport,Est at 10:05,arrival,2024-11-07 10:20:00
+2024-11-07,10:30,5Y 8227,GTI,MIA,HKG,Miami International Airport,Hong Kong International Airport,Est at 12:55,arrival,2024-11-07 10:30:00
+2024-11-07,10:30,CP 137,LSI,MXP,HKG,Malpensa International Airport,Hong Kong International Airport,,arrival,2024-11-07 10:30:00
+2024-11-07,10:50,TK 6134,THY,IST,HKG,İstanbul Airport,Hong Kong International Airport,,arrival,2024-11-07 10:50:00
+2024-11-07,10:50,K4 624,CKS,MIA,HKG,Miami International Airport,Hong Kong International Airport,Est at 11:00,arrival,2024-11-07 10:50:00
+2024-11-07,11:05,ET 3684,ETH,LGG,HKG,Liège Airport,Hong Kong International Airport,,arrival,2024-11-07 11:05:00
+2024-11-07,11:15,CX 051,CPA,PVG,HKG,Shanghai Pudong International Airport,Hong Kong International Airport,,arrival,2024-11-07 11:15:00
+2024-11-07,11:20,SQ 7921,SIA,DFW,HKG,Dallas Fort Worth International Airport,Hong Kong International Airport,Est at 11:08,arrival,2024-11-07 11:20:00
+2024-11-07,11:25,CX 3255,CPA,PVG,HKG,Shanghai Pudong International Airport,Hong Kong International Airport,,arrival,2024-11-07 11:25:00
+2024-11-07,11:40,PO 927,PAC,LAX,HKG,Los Angeles International Airport,Hong Kong International Airport,,arrival,2024-11-07 11:40:00
+2024-11-07,12:10,D0 520,DHK,EMA,HKG,East Midlands Airport,Hong Kong International Airport,,arrival,2024-11-07 12:10:00
+2024-11-07,12:20,RH 963,HKC,KIX,HKG,Kansai International Airport,Hong Kong International Airport,,arrival,2024-11-07 12:20:00
+2024-11-07,12:45,QR 8428,QTR,DOH,HKG,Hamad International Airport,Hong Kong International Airport,,arrival,2024-11-07 12:45:00
+2024-11-07,12:50,WW 861,KXP,BKI,HKG,Kota Kinabalu International Airport,Hong Kong International Airport,Est at 14:15,arrival,2024-11-07 12:50:00
+2024-11-07,12:50,ET 3673,ETH,ADD,HKG,Addis Ababa Bole International Airport,Hong Kong International Airport,Est at 20:45,arrival,2024-11-07 12:50:00
+2024-11-07,13:05,LH 8470,GEC,FRA,HKG,Frankfurt am Main Airport,Hong Kong International Airport,,arrival,2024-11-07 13:05:00
+2024-11-07,13:10,RH 332,HKC,BKK,HKG,Suvarnabhumi Airport,Hong Kong International Airport,Est at 15:10,arrival,2024-11-07 13:10:00
+2024-11-07,13:20,EK 9840,UAE,DWC,HKG,Al Maktoum International Airport,Hong Kong International Airport,Est at 13:05,arrival,2024-11-07 13:20:00
+2024-11-07,13:40,5Y 5561,GTI,ALA,HKG,Almaty International Airport,Hong Kong International Airport,Est at 13:40,arrival,2024-11-07 13:40:00
+2024-11-07,13:40,5Y 343,GTI,ORD,HKG,Chicago O'Hare International Airport,Hong Kong International Airport,Est at 14:26,arrival,2024-11-07 13:40:00
+2024-11-07,13:45,KE 8313,KAL,ICN,HKG,Incheon International Airport,Hong Kong International Airport,Est at 15:15,arrival,2024-11-07 13:45:00
+2024-11-07,13:50,5Y 4303,GTI,ORD,HKG,Chicago O'Hare International Airport,Hong Kong International Airport,Cancelled,arrival,2024-11-07 13:50:00
+2024-11-07,14:15,FX 014,FDX,KIX,HKG,Kansai International Airport,Hong Kong International Airport,,arrival,2024-11-07 14:15:00
+2024-11-07,14:35,5X 062,UPS,SDF,HKG,Louisville Muhammad Ali International Airport,Hong Kong International Airport,,arrival,2024-11-07 14:35:00
+2024-11-07,14:45,5X 167,UPS,SDF,HKG,Louisville Muhammad Ali International Airport,Hong Kong International Airport,,arrival,2024-11-07 14:45:00
+2024-11-07,14:55,CX 005,CPA,NRT,HKG,Narita International Airport,Hong Kong International Airport,,arrival,2024-11-07 14:55:00
+2024-11-07,14:55,5X 002,UPS,PHL,HKG,Philadelphia International Airport,Hong Kong International Airport,,arrival,2024-11-07 14:55:00
+2024-11-07,15:15,5X 058,UPS,ONT,HKG,Ontario International Airport,Hong Kong International Airport,,arrival,2024-11-07 15:15:00
+2024-11-07,15:45,3S 590,BOX,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,,arrival,2024-11-07 15:45:00
+2024-11-07,15:50,D0 002,DHK,CVG,HKG,Cincinnati Northern Kentucky International Airport,Hong Kong International Airport,,arrival,2024-11-07 15:50:00
+2024-11-07,16:00,CV 4793,CLX,LUX,HKG,Luxembourg-Findel International Airport,Hong Kong International Airport,Est at 18:25,arrival,2024-11-07 16:00:00
+2024-11-07,16:00,7L 8114,AZG,GYD,HKG,Heydar Aliyev International Airport,Hong Kong International Airport,Est at 07:30,arrival,2024-11-07 16:00:00
+2024-11-07,16:00,QR 8754,QTR,DOH,HKG,Hamad International Airport,Hong Kong International Airport,,arrival,2024-11-07 16:00:00
+2024-11-07,16:10,MH 6118,MAS,BKI,HKG,Kota Kinabalu International Airport,Hong Kong International Airport,Delayed,arrival,2024-11-07 16:10:00
+2024-11-07,16:15,5X 064,UPS,SDF,HKG,Louisville Muhammad Ali International Airport,Hong Kong International Airport,,arrival,2024-11-07 16:15:00
+2024-11-07,16:20,C8 9263,ICV,MXP,HKG,Malpensa International Airport,Hong Kong International Airport,,arrival,2024-11-07 16:20:00
+2024-11-07,16:30,7L 147,AZG,GYD,HKG,Heydar Aliyev International Airport,Hong Kong International Airport,,arrival,2024-11-07 16:30:00
+2024-11-07,16:30,5C 1851,ICL,TLV,HKG,Ben Gurion International Airport,Hong Kong International Airport,Est at 11:30,arrival,2024-11-07 16:30:00
+2024-11-07,16:35,EK 9836,UAE,DWC,HKG,Al Maktoum International Airport,Hong Kong International Airport,Est at 11:50,arrival,2024-11-07 16:35:00
+2024-11-07,16:35,YG 9177,HYT,LHW,HKG,Lanzhou Zhongchuan International Airport,Hong Kong International Airport,Est at 16:50,arrival,2024-11-07 16:35:00
+2024-11-07,16:40,FX 5391,FDX,ICN,HKG,Incheon International Airport,Hong Kong International Airport,,arrival,2024-11-07 16:40:00
+2024-11-07,16:45,CX 3097,CPA,MIA,HKG,Miami International Airport,Hong Kong International Airport,Est at 18:30,arrival,2024-11-07 16:45:00
+2024-11-07,16:50,CI 5837,CAL,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,,arrival,2024-11-07 16:50:00
+2024-11-07,16:55,SV 3020,SVA,RUH,HKG,King Khaled International Airport,Hong Kong International Airport,Est at 19:30,arrival,2024-11-07 16:55:00
+2024-11-07,18:40,ET 3718,ETH,LGG,HKG,Liège Airport,Hong Kong International Airport,,arrival,2024-11-07 18:40:00
+2024-11-07,18:40,QR 8840,QTR,DOH,HKG,Hamad International Airport,Hong Kong International Airport,,arrival,2024-11-07 18:40:00
+2024-11-07,18:55,FX 169,FDX,MEM,HKG,Memphis International Airport,Hong Kong International Airport,,arrival,2024-11-07 18:55:00
+2024-11-07,19:30,CX 3093,CPA,LAX,HKG,Los Angeles International Airport,Hong Kong International Airport,,arrival,2024-11-07 19:30:00
+2024-11-07,19:50,5Y 8539,GTI,LAX,HKG,Los Angeles International Airport,Hong Kong International Airport,Cancelled,arrival,2024-11-07 19:50:00
+2024-11-07,20:30,RH 9486,HKC,IST,HKG,İstanbul Airport,Hong Kong International Airport,Est at 22:30,arrival,2024-11-07 20:30:00
+2024-11-07,20:40,AK 8008X,AXM,BKI,HKG,Kota Kinabalu International Airport,Hong Kong International Airport,,arrival,2024-11-07 20:40:00
+2024-11-07,20:45,5Y 8244,GTI,JFK,HKG,John F Kennedy International Airport,Hong Kong International Airport,Est at 20:45,arrival,2024-11-07 20:45:00
+2024-11-07,21:05,AK 8576,AXM,KCH,HKG,Kuching International Airport,Hong Kong International Airport,,arrival,2024-11-07 21:05:00
+2024-11-07,21:05,EK 9784,UAE,DWC,HKG,Al Maktoum International Airport,Hong Kong International Airport,,arrival,2024-11-07 21:05:00
+2024-11-07,21:15,QR 8410,QTR,DOH,HKG,Hamad International Airport,Hong Kong International Airport,,arrival,2024-11-07 21:15:00
+2024-11-07,21:20,5Y 8129,GTI,LAX,HKG,Los Angeles International Airport,Hong Kong International Airport,,arrival,2024-11-07 21:20:00
+2024-11-07,21:25,5Y 9705,GTI,OKO,HKG,Yokota Air Base,Hong Kong International Airport,,arrival,2024-11-07 21:25:00
+2024-11-07,21:45,6E 8045,IGO,CCU,HKG,Netaji Subhash Chandra Bose International Airport,Hong Kong International Airport,,arrival,2024-11-07 21:45:00
+2024-11-07,22:15,CX 3144,CPA,DEL,HKG,Indira Gandhi International Airport,Hong Kong International Airport,,arrival,2024-11-07 22:15:00
+2024-11-07,22:20,CX 2097,CPA,MIA,HKG,Miami International Airport,Hong Kong International Airport,Est at 23:30,arrival,2024-11-07 22:20:00
+2024-11-07,22:30,FKH8401,FKH,TAS,HKG,Tashkent International Airport,Hong Kong International Airport,,arrival,2024-11-07 22:30:00
+2024-11-07,22:35,CX 048,CPA,HAN,HKG,Noi Bai International Airport,Hong Kong International Airport,,arrival,2024-11-07 22:35:00
+2024-11-07,22:35,D0 524,DHK,EMA,HKG,East Midlands Airport,Hong Kong International Airport,,arrival,2024-11-07 22:35:00
+2024-11-07,22:55,FX 9797,FDX,ANC,HKG,Ted Stevens Anchorage International Airport,Hong Kong International Airport,,arrival,2024-11-07 22:55:00
+2024-11-07,23:20,ES 721,DHX,BAH,HKG,Bahrain International Airport,Hong Kong International Airport,,arrival,2024-11-07 23:20:00
+2024-11-07,23:50,RH 318,HKC,HAN,HKG,Noi Bai International Airport,Hong Kong International Airport,Est at 23:30,arrival,2024-11-07 23:50:00
+2024-11-07,23:55,K4 281,CKS,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,,arrival,2024-11-07 23:55:00
+2024-11-03,07:30,MA 533,EAU,HKG,MCT,Hong Kong International Airport,Muscat International Airport,Est at 07:00 (07/11/2024),departure,2024-11-03 07:30:00
+2024-11-05,05:50,ET 3034,ETH,HKG,LGG,Hong Kong International Airport,Liège Airport,Est at 04:35 (07/11/2024),departure,2024-11-05 05:50:00
+2024-11-05,17:00,CC 1007,ABD,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Est at 19:45 (07/11/2024),departure,2024-11-05 17:00:00
+2024-11-06,07:50,MB 380,MNB,HKG,CRZ,Hong Kong International Airport,Türkmenabat International Airport,Est at 07:30 (07/11/2024),departure,2024-11-06 07:50:00
+2024-11-06,08:50,5Y 8052,GTI,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Est at 22:45 (07/11/2024),departure,2024-11-06 08:50:00
+2024-11-06,18:55,SV 3961,SVA,HKG,JED,Hong Kong International Airport,King Abdulaziz International Airport,Est at 07:55 (07/11/2024),departure,2024-11-06 18:55:00
+2024-11-07,00:30,7L 625,AZG,HKG,GYD,Hong Kong International Airport,Heydar Aliyev International Airport,Dep 00:05,departure,2024-11-07 00:30:00
+2024-11-07,00:40,CX 3170,CPA,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 00:40:00
+2024-11-07,01:00,FX 9731,FDX,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 01:00:00
+2024-11-07,01:05,CX 006,CPA,HKG,NRT,Hong Kong International Airport,Narita International Airport,,departure,2024-11-07 01:05:00
+2024-11-07,01:30,RH 351,HKC,HKG,MNL,Hong Kong International Airport,Ninoy Aquino International Airport,Est at 00:10,departure,2024-11-07 01:30:00
+2024-11-07,01:40,CV 7333,CLX,HKG,ASB,Hong Kong International Airport,Ashgabat International Airport,Est at 07:05,departure,2024-11-07 01:40:00
+2024-11-07,02:00,TH 6827,RMY,HKG,KUL,Hong Kong International Airport,Kuala Lumpur International Airport,Cancelled,departure,2024-11-07 02:00:00
+2024-11-07,02:30,SV 983,SVA,HKG,RUH,Hong Kong International Airport,King Khaled International Airport,Est at 07:40,departure,2024-11-07 02:30:00
+2024-11-07,02:40,NH 8512,ANA,HKG,NRT,Hong Kong International Airport,Narita International Airport,,departure,2024-11-07 02:40:00
+2024-11-07,02:45,KZ 202,NCA,HKG,NRT,Hong Kong International Airport,Narita International Airport,,departure,2024-11-07 02:45:00
+2024-11-07,02:55,CX 3254,CPA,HKG,PVG,Hong Kong International Airport,Shanghai Pudong International Airport,,departure,2024-11-07 02:55:00
+2024-11-07,03:00,EK 9885,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Est at 06:35,departure,2024-11-07 03:00:00
+2024-11-07,03:00,CI 5836,CAL,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,,departure,2024-11-07 03:00:00
+2024-11-07,03:00,RH 962,HKC,HKG,KIX,Hong Kong International Airport,Kansai International Airport,,departure,2024-11-07 03:00:00
+2024-11-07,03:20,LD 327,AHK,HKG,SIN,Hong Kong International Airport,Singapore Changi Airport,,departure,2024-11-07 03:20:00
+2024-11-07,03:20,LD 768,AHK,HKG,PEK,Hong Kong International Airport,Beijing Capital International Airport,,departure,2024-11-07 03:20:00
+2024-11-07,03:25,LD 128,AHK,HKG,ICN,Hong Kong International Airport,Incheon International Airport,,departure,2024-11-07 03:25:00
+2024-11-07,03:25,KE 314,KAL,HKG,ICN,Hong Kong International Airport,Incheon International Airport,,departure,2024-11-07 03:25:00
+2024-11-07,03:30,LD 204,AHK,HKG,KIX,Hong Kong International Airport,Kansai International Airport,,departure,2024-11-07 03:30:00
+2024-11-07,03:30,8K 526,KMI,HKG,BKK,Hong Kong International Airport,Suvarnabhumi Airport,,departure,2024-11-07 03:30:00
+2024-11-07,03:30,BR 6536,EVA,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,,departure,2024-11-07 03:30:00
+2024-11-07,03:40,LD 457,AHK,HKG,MNL,Hong Kong International Airport,Ninoy Aquino International Airport,,departure,2024-11-07 03:40:00
+2024-11-07,03:40,LD 831,AHK,HKG,BKK,Hong Kong International Airport,Suvarnabhumi Airport,,departure,2024-11-07 03:40:00
+2024-11-07,03:45,LD 208,AHK,HKG,NRT,Hong Kong International Airport,Narita International Airport,,departure,2024-11-07 03:45:00
+2024-11-07,03:45,LD 216,AHK,HKG,NGO,Hong Kong International Airport,Chubu Centrair International Airport,,departure,2024-11-07 03:45:00
+2024-11-07,03:45,LD 561,AHK,HKG,SGN,Hong Kong International Airport,Tan Son Nhat International Airport,,departure,2024-11-07 03:45:00
+2024-11-07,03:45,TH 3508,RMY,HKG,KUL,Hong Kong International Airport,Kuala Lumpur International Airport,,departure,2024-11-07 03:45:00
+2024-11-07,03:50,LD 782,AHK,HKG,PVG,Hong Kong International Airport,Shanghai Pudong International Airport,,departure,2024-11-07 03:50:00
+2024-11-07,04:00,2Y 6011,MYU,HKG,CGK,Hong Kong International Airport,Soekarno-Hatta International Airport,,departure,2024-11-07 04:00:00
+2024-11-07,04:00,D0 525,DHK,HKG,CVG,Hong Kong International Airport,Cincinnati Northern Kentucky International Airport,Cancelled,departure,2024-11-07 04:00:00
+2024-11-07,04:00,K4 285,CKS,HKG,LAX,Hong Kong International Airport,Los Angeles International Airport,,departure,2024-11-07 04:00:00
+2024-11-07,04:00,LD 720,AHK,HKG,CTU,Hong Kong International Airport,Chengdu Shuangliu International Airport,,departure,2024-11-07 04:00:00
+2024-11-07,04:05,ES 696,DHX,HKG,BAH,Hong Kong International Airport,Bahrain International Airport,,departure,2024-11-07 04:05:00
+2024-11-07,04:10,TH 3091,RMY,HKG,PEN,Hong Kong International Airport,Penang International Airport,,departure,2024-11-07 04:10:00
+2024-11-07,04:20,LD 680,AHK,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,,departure,2024-11-07 04:20:00
+2024-11-07,04:25,ES 732,DHX,HKG,BLR,Hong Kong International Airport,Kempegowda International Airport,,departure,2024-11-07 04:25:00
+2024-11-07,04:25,HJ 022,TMN,HKG,SYD,Hong Kong International Airport,Sydney Kingsford Smith International Airport,,departure,2024-11-07 04:25:00
+2024-11-07,04:45,ET 3791,ETH,HKG,LGG,Hong Kong International Airport,Liège Airport,Est at 10:35,departure,2024-11-07 04:45:00
+2024-11-07,05:10,CX 086,CPA,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 05:10:00
+2024-11-07,05:35,ES 778,DHX,HKG,BAH,Hong Kong International Airport,Bahrain International Airport,,departure,2024-11-07 05:35:00
+2024-11-07,05:35,QY 513,BCS,HKG,DXB,Hong Kong International Airport,Dubai International Airport,,departure,2024-11-07 05:35:00
+2024-11-07,05:50,RH 331,HKC,HKG,BKK,Hong Kong International Airport,Suvarnabhumi Airport,Est at 07:40,departure,2024-11-07 05:50:00
+2024-11-07,05:50,ES 724,DHX,HKG,BAH,Hong Kong International Airport,Bahrain International Airport,Cancelled,departure,2024-11-07 05:50:00
+2024-11-07,05:55,5Y 8523,GTI,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Est at 07:15,departure,2024-11-07 05:55:00
+2024-11-07,06:00,QY 547,BCS,HKG,ALA,Hong Kong International Airport,Almaty International Airport,,departure,2024-11-07 06:00:00
+2024-11-07,06:20,FX 5025,FDX,HKG,IST,Hong Kong International Airport,İstanbul Airport,,departure,2024-11-07 06:20:00
+2024-11-07,06:20,3S 593,BOX,HKG,DEL,Hong Kong International Airport,Indira Gandhi International Airport,Est at 09:15,departure,2024-11-07 06:20:00
+2024-11-07,06:50,3V 517,TAY,HKG,ALA,Hong Kong International Airport,Almaty International Airport,,departure,2024-11-07 06:50:00
+2024-11-07,06:50,K4 615,CKS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Est at 10:30,departure,2024-11-07 06:50:00
+2024-11-07,06:55,K4 675,CKS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Est at 08:15,departure,2024-11-07 06:55:00
+2024-11-07,06:55,CX 3280,CPA,HKG,LAX,Hong Kong International Airport,Los Angeles International Airport,,departure,2024-11-07 06:55:00
+2024-11-07,07:00,HC 311,HGO,HKG,MCT,Hong Kong International Airport,Muscat International Airport,Est at 07:40,departure,2024-11-07 07:00:00
+2024-11-07,07:00,ET 3039,ETH,HKG,ADD,Hong Kong International Airport,Addis Ababa Bole International Airport,,departure,2024-11-07 07:00:00
+2024-11-07,07:05,OZ 968,AAR,HKG,ICN,Hong Kong International Airport,Incheon International Airport,Est at 20:05,departure,2024-11-07 07:05:00
+2024-11-07,07:05,CC 1001,ABD,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Cancelled,departure,2024-11-07 07:05:00
+2024-11-07,07:05,MA 533,EAU,HKG,MCT,Hong Kong International Airport,Muscat International Airport,,departure,2024-11-07 07:05:00
+2024-11-07,07:10,CK 264,CKK,HKG,PVG,Hong Kong International Airport,Shanghai Pudong International Airport,,departure,2024-11-07 07:10:00
+2024-11-07,07:25,O3 338,CSS,HKG,EHU,Hong Kong International Airport,Ezhou Huahu Airport (under construction),Est at 08:05,departure,2024-11-07 07:25:00
+2024-11-07,07:25,QR 8059,QTR,HKG,DOH,Hong Kong International Airport,Hamad International Airport,,departure,2024-11-07 07:25:00
+2024-11-07,07:50,5Y 8763,GTI,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Est at 07:40,departure,2024-11-07 07:50:00
+2024-11-07,07:55,K4 613,CKS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Est at 09:00,departure,2024-11-07 07:55:00
+2024-11-07,07:55,O3 268,CSS,HKG,NGB,Hong Kong International Airport,Ningbo Lishe International Airport,Est at 10:05,departure,2024-11-07 07:55:00
+2024-11-07,07:55,EY 948,ETD,HKG,AUH,Hong Kong International Airport,Abu Dhabi International Airport,Est at 09:35,departure,2024-11-07 07:55:00
+2024-11-07,08:55,EK 9833,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Est at 08:15,departure,2024-11-07 08:55:00
+2024-11-07,09:15,CX 043,CPA,HKG,DEL,Hong Kong International Airport,Indira Gandhi International Airport,,departure,2024-11-07 09:15:00
+2024-11-07,09:25,3S 517,BOX,HKG,LEJ,Hong Kong International Airport,Leipzig/Halle Airport,,departure,2024-11-07 09:25:00
+2024-11-07,09:30,OZ 954,AAR,HKG,ICN,Hong Kong International Airport,Incheon International Airport,,departure,2024-11-07 09:30:00
+2024-11-07,10:05,KD 213,WGN,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 10:05:00
+2024-11-07,11:00,3S 580,BOX,HKG,CVG,Hong Kong International Airport,Cincinnati Northern Kentucky International Airport,Cancelled,departure,2024-11-07 11:00:00
+2024-11-07,11:10,RH 4568,HKC,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,,departure,2024-11-07 11:10:00
+2024-11-07,11:10,CV 7624,CLX,HKG,ASB,Hong Kong International Airport,Ashgabat International Airport,Est at 12:05,departure,2024-11-07 11:10:00
+2024-11-07,11:10,5X 003,UPS,HKG,DXB,Hong Kong International Airport,Dubai International Airport,,departure,2024-11-07 11:10:00
+2024-11-07,11:15,CV 5964,CLX,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 11:15:00
+2024-11-07,11:30,SQ 7952,SIA,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 11:30:00
+2024-11-07,11:55,CX 036,CPA,HKG,KIX,Hong Kong International Airport,Kansai International Airport,,departure,2024-11-07 11:55:00
+2024-11-07,12:00,7L 648,AZG,HKG,GYD,Hong Kong International Airport,Heydar Aliyev International Airport,,departure,2024-11-07 12:00:00
+2024-11-07,12:00,5Y 8702,GTI,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 12:00:00
+2024-11-07,12:05,ET 3719,ETH,HKG,ADD,Hong Kong International Airport,Addis Ababa Bole International Airport,,departure,2024-11-07 12:05:00
+2024-11-07,12:05,5Y 8030,GTI,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Est at 14:10,departure,2024-11-07 12:05:00
+2024-11-07,12:25,EK 9825,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,,departure,2024-11-07 12:25:00
+2024-11-07,12:50,TK 6135,THY,HKG,FRU,Hong Kong International Airport,Manas International Airport,,departure,2024-11-07 12:50:00
+2024-11-07,13:00,T8 4711,TVR,HKG,BNE,Hong Kong International Airport,Brisbane International Airport,,departure,2024-11-07 13:00:00
+2024-11-07,13:15,EK 9787,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Est at 12:20,departure,2024-11-07 13:15:00
+2024-11-07,13:25,RH 9493,HKC,HKG,ALA,Hong Kong International Airport,Almaty International Airport,Est at 16:20,departure,2024-11-07 13:25:00
+2024-11-07,13:45,CX 080,CPA,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 13:45:00
+2024-11-07,13:50,K4 625,CKS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Est at 14:00,departure,2024-11-07 13:50:00
+2024-11-07,13:50,SQ 7921,SIA,HKG,SIN,Hong Kong International Airport,Singapore Changi Airport,,departure,2024-11-07 13:50:00
+2024-11-07,13:55,5X 067,UPS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 13:55:00
+2024-11-07,14:00,CC 4100,ABD,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Est at 18:20,departure,2024-11-07 14:00:00
+2024-11-07,14:10,WW 862,KXP,HKG,KUL,Hong Kong International Airport,Kuala Lumpur International Airport,Est at 15:15,departure,2024-11-07 14:10:00
+2024-11-07,14:20,QR 8429,QTR,HKG,DOH,Hong Kong International Airport,Hamad International Airport,Est at 14:25,departure,2024-11-07 14:20:00
+2024-11-07,14:30,PO 926,PAC,HKG,ICN,Hong Kong International Airport,Incheon International Airport,Est at 14:25,departure,2024-11-07 14:30:00
+2024-11-07,14:40,CX 084,CPA,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 14:40:00
+2024-11-07,14:50,ET 3601,ETH,HKG,ADD,Hong Kong International Airport,Addis Ababa Bole International Airport,Cancelled,departure,2024-11-07 14:50:00
+2024-11-07,15:05,LH 8471,GEC,HKG,FRA,Hong Kong International Airport,Frankfurt am Main Airport,,departure,2024-11-07 15:05:00
+2024-11-07,15:20,EK 9841,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,,departure,2024-11-07 15:20:00
+2024-11-07,15:20,CC 4400,ABD,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,,departure,2024-11-07 15:20:00
+2024-11-07,15:45,ET 3685,ETH,HKG,ADD,Hong Kong International Airport,Addis Ababa Bole International Airport,Est at 22:15,departure,2024-11-07 15:45:00
+2024-11-07,15:45,KE 8314,KAL,HKG,ICN,Hong Kong International Airport,Incheon International Airport,Est at 17:15,departure,2024-11-07 15:45:00
+2024-11-07,15:50,CX 3247,CPA,HKG,HAN,Hong Kong International Airport,Noi Bai International Airport,,departure,2024-11-07 15:50:00
+2024-11-07,16:10,5X 166,UPS,HKG,SIN,Hong Kong International Airport,Singapore Changi Airport,,departure,2024-11-07 16:10:00
+2024-11-07,16:30,P9 881,MGE,HKG,GUM,Hong Kong International Airport,Antonio B. Won Pat International Airport,Est at 17:30,departure,2024-11-07 16:30:00
+2024-11-07,16:35,FX 014,FDX,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,,departure,2024-11-07 16:35:00
+2024-11-07,16:50,5Y 4304,GTI,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Cancelled,departure,2024-11-07 16:50:00
+2024-11-07,17:00,D0 519,DHK,HKG,LEJ,Hong Kong International Airport,Leipzig/Halle Airport,,departure,2024-11-07 17:00:00
+2024-11-07,17:05,5X 001,UPS,HKG,CGN,Hong Kong International Airport,Cologne Bonn Airport,Est at 17:00,departure,2024-11-07 17:05:00
+2024-11-07,17:25,CX 2031,CPA,HKG,MAA,Hong Kong International Airport,Chennai International Airport,,departure,2024-11-07 17:25:00
+2024-11-07,17:30,5X 061,UPS,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,,departure,2024-11-07 17:30:00
+2024-11-07,17:45,5Y 654,GTI,HKG,ICN,Hong Kong International Airport,Incheon International Airport,Est at 07:05 (08/11/2024),departure,2024-11-07 17:45:00
+2024-11-07,18:00,NJ 5505,RCR,HKG,SHJ,Hong Kong International Airport,Sharjah International Airport,,departure,2024-11-07 18:00:00
+2024-11-07,18:00,N8 510,NCR,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,,departure,2024-11-07 18:00:00
+2024-11-07,18:00,QR 8755,QTR,HKG,DOH,Hong Kong International Airport,Hamad International Airport,,departure,2024-11-07 18:00:00
+2024-11-07,18:00,5Y 8349,GTI,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Est at 18:25,departure,2024-11-07 18:00:00
+2024-11-07,18:00,CV 5794,CLX,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Est at 20:05,departure,2024-11-07 18:00:00
+2024-11-07,18:05,D0 003,DHK,HKG,NGO,Hong Kong International Airport,Chubu Centrair International Airport,,departure,2024-11-07 18:05:00
+2024-11-07,18:10,MH 6119,MAS,HKG,KUL,Hong Kong International Airport,Kuala Lumpur International Airport,Delayed,departure,2024-11-07 18:10:00
+2024-11-07,18:15,YG 9178,HYT,HKG,LHW,Hong Kong International Airport,Lanzhou Zhongchuan International Airport,Est at 18:20,departure,2024-11-07 18:15:00
+2024-11-07,18:20,C8 9264,ICV,HKG,ASB,Hong Kong International Airport,Ashgabat International Airport,,departure,2024-11-07 18:20:00
+2024-11-07,18:20,RH 317,HKC,HKG,HAN,Hong Kong International Airport,Noi Bai International Airport,Est at 18:00,departure,2024-11-07 18:20:00
+2024-11-07,18:30,7L 8115,AZG,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 18:30:00
+2024-11-07,18:35,EK 9837,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Est at 14:20,departure,2024-11-07 18:35:00
+2024-11-07,18:35,SV 3021,SVA,HKG,RUH,Hong Kong International Airport,King Khaled International Airport,Est at 21:10,departure,2024-11-07 18:35:00
+2024-11-07,18:50,CI 5838,CAL,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,,departure,2024-11-07 18:50:00
+2024-11-07,19:15,7L 148,AZG,HKG,GYD,Hong Kong International Airport,Heydar Aliyev International Airport,,departure,2024-11-07 19:15:00
+2024-11-07,19:30,5C 1852,ICL,HKG,TLV,Hong Kong International Airport,Ben Gurion International Airport,Est at 14:30,departure,2024-11-07 19:30:00
+2024-11-07,19:40,ET 3793,ETH,HKG,LGG,Hong Kong International Airport,Liège Airport,,departure,2024-11-07 19:40:00
+2024-11-07,19:50,HC 511,HGO,HKG,MCT,Hong Kong International Airport,Muscat International Airport,,departure,2024-11-07 19:50:00
+2024-11-07,20:20,5X 063,UPS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 20:20:00
+2024-11-07,20:40,QR 8431,QTR,HKG,DOH,Hong Kong International Airport,Hamad International Airport,,departure,2024-11-07 20:40:00
+2024-11-07,20:45,5X 059,UPS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 20:45:00
+2024-11-07,21:05,CX 3250,CPA,HKG,CGO,Hong Kong International Airport,Zhengzhou Xinzheng International Airport,,departure,2024-11-07 21:05:00
+2024-11-07,21:45,3S 590,BOX,HKG,CVG,Hong Kong International Airport,Cincinnati Northern Kentucky International Airport,,departure,2024-11-07 21:45:00
+2024-11-07,22:10,CX 3262,CPA,HKG,CKG,Hong Kong International Airport,Chongqing Jiangbei International Airport,,departure,2024-11-07 22:10:00
+2024-11-07,22:10,AK 8011,AXM,HKG,KUL,Hong Kong International Airport,Kuala Lumpur International Airport,,departure,2024-11-07 22:10:00
+2024-11-07,22:15,FX 5986,FDX,HKG,MEM,Hong Kong International Airport,Memphis International Airport,,departure,2024-11-07 22:15:00
+2024-11-07,22:20,FX 5391,FDX,HKG,KIX,Hong Kong International Airport,Kansai International Airport,,departure,2024-11-07 22:20:00
+2024-11-07,22:35,AK 8927,AXM,HKG,KUL,Hong Kong International Airport,Kuala Lumpur International Airport,,departure,2024-11-07 22:35:00
+2024-11-07,23:15,QR 8411,QTR,HKG,DOH,Hong Kong International Airport,Hamad International Airport,,departure,2024-11-07 23:15:00
+2024-11-07,23:15,6E 8046,IGO,HKG,CCU,Hong Kong International Airport,Netaji Subhash Chandra Bose International Airport,,departure,2024-11-07 23:15:00
+2024-11-07,23:20,EK 9785,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,,departure,2024-11-07 23:20:00
+2024-11-07,23:25,CX 2067,CPA,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,,departure,2024-11-07 23:25:00
+2024-11-07,23:55,5Y 348,GTI,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,,departure,2024-11-07 23:55:00
 2024-11-01,14:50,SV 3960,SVA,RUH,HKG,King Khaled International Airport,Hong Kong International Airport,Cancelled,arrival,2024-11-01 14:50:00
 2024-11-05,01:35,X7 751,CHG,TLV,HKG,Ben Gurion International Airport,Hong Kong International Airport,Cancelled,arrival,2024-11-05 01:35:00
 2024-11-05,08:15,MB 180,MNB,NVI,HKG,Navoi Airport,Hong Kong International Airport,At gate 05:28 (06/11/2024),arrival,2024-11-05 08:15:00
@@ -21548,247 +21847,3 @@ date,time,flight_no,airline,origin,destination,origin_name,destination_name,stat
 2024-08-10,23:30,CX 054,CPA,HKG,PVG,Hong Kong International Airport,Shanghai Pudong International Airport,Dep 23:04 (11/08/2024),departure,2024-08-10 23:30:00
 2024-08-10,23:30,CV 7366,CLX,HKG,ASB,Hong Kong International Airport,Ashgabat International Airport,Dep 21:01,departure,2024-08-10 23:30:00
 2024-08-10,23:40,5Y 8522,GTI,HKG,HAN,Hong Kong International Airport,Noi Bai International Airport,Dep 02:40 (11/08/2024),departure,2024-08-10 23:40:00
-2024-08-09,00:00,MB 852,MNB,DEL,HKG,Indira Gandhi International Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 00:00:00
-2024-08-09,00:10,KZ 203,NCA,NRT,HKG,Narita International Airport,Hong Kong International Airport,At gate 23:43 (08/08/2024),arrival,2024-08-09 00:10:00
-2024-08-09,00:20,LD 681,AHK,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,At gate 23:52 (08/08/2024),arrival,2024-08-09 00:20:00
-2024-08-09,00:25,LD 129,AHK,ICN,HKG,Incheon International Airport,Hong Kong International Airport,At gate 00:22,arrival,2024-08-09 00:25:00
-2024-08-09,00:30,LD 392,AHK,PEN,HKG,Penang International Airport,Hong Kong International Airport,At gate 00:23,arrival,2024-08-09 00:30:00
-2024-08-09,00:35,RH 318,HKC,HAN,HKG,Noi Bai International Airport,Hong Kong International Airport,At gate 02:24,arrival,2024-08-09 00:35:00
-2024-08-09,00:40,LD 205,AHK,KIX,HKG,Kansai International Airport,Hong Kong International Airport,At gate 00:41,arrival,2024-08-09 00:40:00
-2024-08-09,00:45,LD 456,AHK,CEB,HKG,Mactan Cebu International Airport,Hong Kong International Airport,At gate 01:02,arrival,2024-08-09 00:45:00
-2024-08-09,00:45,CX 035,CPA,KIX,HKG,Kansai International Airport,Hong Kong International Airport,At gate 00:33,arrival,2024-08-09 00:45:00
-2024-08-09,00:50,LD 217,AHK,NGO,HKG,Chubu Centrair International Airport,Hong Kong International Airport,At gate 00:12,arrival,2024-08-09 00:50:00
-2024-08-09,00:50,NH 8511,ANA,NRT,HKG,Narita International Airport,Hong Kong International Airport,At gate 00:06,arrival,2024-08-09 00:50:00
-2024-08-09,00:55,SV 986,SVA,RUH,HKG,King Khaled International Airport,Hong Kong International Airport,At gate 02:47,arrival,2024-08-09 00:55:00
-2024-08-09,01:00,CI 5825,CAL,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,At gate 02:37,arrival,2024-08-09 01:00:00
-2024-08-09,01:00,LD 769,AHK,PEK,HKG,Beijing Capital International Airport,Hong Kong International Airport,At gate 01:26,arrival,2024-08-09 01:00:00
-2024-08-09,01:00,LD 209,AHK,NRT,HKG,Narita International Airport,Hong Kong International Airport,At gate 00:39,arrival,2024-08-09 01:00:00
-2024-08-09,01:05,KE 313,KAL,ICN,HKG,Incheon International Airport,Hong Kong International Airport,At gate 01:13,arrival,2024-08-09 01:05:00
-2024-08-09,01:15,LD 783,AHK,PVG,HKG,Shanghai Pudong International Airport,Hong Kong International Airport,At gate 01:48,arrival,2024-08-09 01:15:00
-2024-08-09,01:15,HJ 021,TMN,SYD,HKG,Sydney Kingsford Smith International Airport,Hong Kong International Airport,At gate 06:28,arrival,2024-08-09 01:15:00
-2024-08-09,01:20,LD 562,AHK,SGN,HKG,Tan Son Nhat International Airport,Hong Kong International Airport,At gate 01:52,arrival,2024-08-09 01:20:00
-2024-08-09,01:20,CX 3295,CPA,JFK,HKG,John F Kennedy International Airport,Hong Kong International Airport,At gate 02:06,arrival,2024-08-09 01:20:00
-2024-08-09,01:20,8K 525,KMI,BKK,HKG,Suvarnabhumi Airport,Hong Kong International Airport,At gate 01:36,arrival,2024-08-09 01:20:00
-2024-08-09,01:20,BR 6537,EVA,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,At gate 01:01,arrival,2024-08-09 01:20:00
-2024-08-09,01:25,LD 326,AHK,SIN,HKG,Singapore Changi Airport,Hong Kong International Airport,At gate 01:42,arrival,2024-08-09 01:25:00
-2024-08-09,01:30,LD 842,AHK,BKK,HKG,Suvarnabhumi Airport,Hong Kong International Airport,At gate 01:34,arrival,2024-08-09 01:30:00
-2024-08-09,01:30,TH 3507,RMY,KUL,HKG,Kuala Lumpur International Airport,Hong Kong International Airport,At gate 02:01,arrival,2024-08-09 01:30:00
-2024-08-09,01:40,KD 214,WGN,ORD,HKG,Chicago O'Hare International Airport,Hong Kong International Airport,At gate 01:33,arrival,2024-08-09 01:40:00
-2024-08-09,02:05,5Y 9541,GTI,JFK,HKG,John F Kennedy International Airport,Hong Kong International Airport,At gate 00:34,arrival,2024-08-09 02:05:00
-2024-08-09,02:05,5X 004,UPS,PHL,HKG,Philadelphia International Airport,Hong Kong International Airport,At gate 02:24,arrival,2024-08-09 02:05:00
-2024-08-09,03:35,K4 647,CKS,ATL,HKG,Hartsfield Jackson Atlanta International Airport,Hong Kong International Airport,At gate 03:46,arrival,2024-08-09 03:35:00
-2024-08-09,03:40,N8 520,NCR,TLV,HKG,Ben Gurion International Airport,Hong Kong International Airport,At gate 06:11,arrival,2024-08-09 03:40:00
-2024-08-09,03:40,3S 512,BOX,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,At gate 04:06,arrival,2024-08-09 03:40:00
-2024-08-09,03:45,QY 544,BCS,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 03:45:00
-2024-08-09,03:50,FX 5217,FDX,KIX,HKG,Kansai International Airport,Hong Kong International Airport,At gate 05:11,arrival,2024-08-09 03:50:00
-2024-08-09,03:55,K4 670,CKS,CVG,HKG,Cincinnati Northern Kentucky International Airport,Hong Kong International Airport,At gate 04:13,arrival,2024-08-09 03:55:00
-2024-08-09,03:55,D0 512,DHK,EMA,HKG,East Midlands Airport,Hong Kong International Airport,At gate 05:06,arrival,2024-08-09 03:55:00
-2024-08-09,04:00,CX 2044,CPA,MAA,HKG,Chennai International Airport,Hong Kong International Airport,At gate 04:31,arrival,2024-08-09 04:00:00
-2024-08-09,04:25,CX 053,CPA,CKG,HKG,Chongqing Jiangbei International Airport,Hong Kong International Airport,At gate 10:57,arrival,2024-08-09 04:25:00
-2024-08-09,04:35,LD 721,AHK,CTU,HKG,Chengdu Shuangliu International Airport,Hong Kong International Airport,At gate 04:46,arrival,2024-08-09 04:35:00
-2024-08-09,04:35,3S 580,BOX,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,At gate 04:43,arrival,2024-08-09 04:35:00
-2024-08-09,04:40,K4 614,CKS,CVG,HKG,Cincinnati Northern Kentucky International Airport,Hong Kong International Airport,At gate 05:00,arrival,2024-08-09 04:40:00
-2024-08-09,05:00,QR 8408,QTR,DOH,HKG,Hamad International Airport,Hong Kong International Airport,At gate 04:49,arrival,2024-08-09 05:00:00
-2024-08-09,05:05,CI 5827,CAL,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 05:05:00
-2024-08-09,05:35,ET 3728,ETH,ADD,HKG,Addis Ababa Bole International Airport,Hong Kong International Airport,At gate 08:26 (10/08/2024),arrival,2024-08-09 05:35:00
-2024-08-09,05:55,3S 514,BOX,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,At gate 08:43,arrival,2024-08-09 05:55:00
-2024-08-09,05:55,RH 4569,HKC,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,At gate 09:21,arrival,2024-08-09 05:55:00
-2024-08-09,06:35,EK 9238,UAE,DWC,HKG,Al Maktoum International Airport,Hong Kong International Airport,At gate 07:30,arrival,2024-08-09 06:35:00
-2024-08-09,06:40,CX 3273,CPA,ATL,HKG,Hartsfield Jackson Atlanta International Airport,Hong Kong International Airport,At gate 08:10,arrival,2024-08-09 06:40:00
-2024-08-09,06:50,RH 352,HKC,MNL,HKG,Ninoy Aquino International Airport,Hong Kong International Airport,At gate 07:25,arrival,2024-08-09 06:50:00
-2024-08-09,07:45,TK 6071,THY,IST,HKG,İstanbul Airport,Hong Kong International Airport,At gate 09:35,arrival,2024-08-09 07:45:00
-2024-08-09,07:50,CX 3251,CPA,PVG,HKG,Shanghai Pudong International Airport,Hong Kong International Airport,At gate 10:36,arrival,2024-08-09 07:50:00
-2024-08-09,08:15,CV 7954,CLX,LUX,HKG,Luxembourg-Findel International Airport,Hong Kong International Airport,At gate 08:35,arrival,2024-08-09 08:15:00
-2024-08-09,08:40,EK 9786,UAE,DWC,HKG,Al Maktoum International Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 08:40:00
-2024-08-09,08:40,3V 401,TAY,LGG,HKG,Liège Airport,Hong Kong International Airport,At gate 13:17,arrival,2024-08-09 08:40:00
-2024-08-09,08:45,O3 267,CSS,NGB,HKG,Ningbo Lishe International Airport,Hong Kong International Airport,At gate 09:00,arrival,2024-08-09 08:45:00
-2024-08-09,08:50,RH 830,HKC,PVG,HKG,Shanghai Pudong International Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 08:50:00
-2024-08-09,09:05,CX 2014,CPA,CDG,HKG,Charles de Gaulle International Airport,Hong Kong International Airport,At gate 09:08,arrival,2024-08-09 09:05:00
-2024-08-09,09:50,CV 4324,CLX,LUX,HKG,Luxembourg-Findel International Airport,Hong Kong International Airport,At gate 10:57,arrival,2024-08-09 09:50:00
-2024-08-09,10:10,EK 9886,UAE,DWC,HKG,Al Maktoum International Airport,Hong Kong International Airport,At gate 11:13,arrival,2024-08-09 10:10:00
-2024-08-09,11:30,OZ 969,AAR,ICN,HKG,Incheon International Airport,Hong Kong International Airport,At gate 14:13,arrival,2024-08-09 11:30:00
-2024-08-09,11:45,QR 8434,QTR,DOH,HKG,Hamad International Airport,Hong Kong International Airport,At gate 12:51,arrival,2024-08-09 11:45:00
-2024-08-09,12:05,5X 068,UPS,SDF,HKG,Louisville Muhammad Ali International Airport,Hong Kong International Airport,At gate 11:51,arrival,2024-08-09 12:05:00
-2024-08-09,12:45,WW 861,KXP,BKI,HKG,Kota Kinabalu International Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 12:45:00
-2024-08-09,12:45,EY 925,ETD,AUH,HKG,Abu Dhabi International Airport,Hong Kong International Airport,At gate 12:31,arrival,2024-08-09 12:45:00
-2024-08-09,12:55,5X 062,UPS,SDF,HKG,Louisville Muhammad Ali International Airport,Hong Kong International Airport,At gate 13:57,arrival,2024-08-09 12:55:00
-2024-08-09,13:10,EK 9788,UAE,DWC,HKG,Al Maktoum International Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 13:10:00
-2024-08-09,13:25,PO 325,PAC,LAX,HKG,Los Angeles International Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 13:25:00
-2024-08-09,13:35,K4 684,CKS,LAX,HKG,Los Angeles International Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 13:35:00
-2024-08-09,13:55,KE 9313,KAL,ICN,HKG,Incheon International Airport,Hong Kong International Airport,At gate 13:36,arrival,2024-08-09 13:55:00
-2024-08-09,14:05,3S 594,BOX,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,At gate 14:31,arrival,2024-08-09 14:05:00
-2024-08-09,14:10,CX 005,CPA,NRT,HKG,Narita International Airport,Hong Kong International Airport,At gate 15:19,arrival,2024-08-09 14:10:00
-2024-08-09,14:10,CX 093,CPA,ORD,HKG,Chicago O'Hare International Airport,Hong Kong International Airport,At gate 14:56,arrival,2024-08-09 14:10:00
-2024-08-09,14:15,RH 332,HKC,BKK,HKG,Suvarnabhumi Airport,Hong Kong International Airport,At gate 18:09,arrival,2024-08-09 14:15:00
-2024-08-09,14:30,FX 9793,FDX,ANC,HKG,Ted Stevens Anchorage International Airport,Hong Kong International Airport,At gate 14:53,arrival,2024-08-09 14:30:00
-2024-08-09,15:10,CX 3259,CPA,PVG,HKG,Shanghai Pudong International Airport,Hong Kong International Airport,At gate 15:29,arrival,2024-08-09 15:10:00
-2024-08-09,15:20,D0 004,DHK,EMA,HKG,East Midlands Airport,Hong Kong International Airport,At gate 14:42,arrival,2024-08-09 15:20:00
-2024-08-09,15:20,EK 9282,UAE,DWC,HKG,Al Maktoum International Airport,Hong Kong International Airport,At gate 05:25 (10/08/2024),arrival,2024-08-09 15:20:00
-2024-08-09,15:30,CV 4934,CLX,LUX,HKG,Luxembourg-Findel International Airport,Hong Kong International Airport,At gate 15:05,arrival,2024-08-09 15:30:00
-2024-08-09,15:35,5X 066,UPS,ONT,HKG,Ontario International Airport,Hong Kong International Airport,At gate 15:24,arrival,2024-08-09 15:35:00
-2024-08-09,15:40,5C 1851,ICL,TLV,HKG,Ben Gurion International Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 15:40:00
-2024-08-09,15:50,CV 4164,CLX,LUX,HKG,Luxembourg-Findel International Airport,Hong Kong International Airport,At gate 15:34,arrival,2024-08-09 15:50:00
-2024-08-09,15:50,MH 6112,MAS,KUL,HKG,Kuala Lumpur International Airport,Hong Kong International Airport,At gate 16:26,arrival,2024-08-09 15:50:00
-2024-08-09,16:35,SQ 7366,SIA,SIN,HKG,Singapore Changi Airport,Hong Kong International Airport,At gate 16:31,arrival,2024-08-09 16:35:00
-2024-08-09,16:45,FX 5391,FDX,ICN,HKG,Incheon International Airport,Hong Kong International Airport,At gate 16:59,arrival,2024-08-09 16:45:00
-2024-08-09,16:50,LH 8474,GEC,FRA,HKG,Frankfurt am Main Airport,Hong Kong International Airport,At gate 18:37,arrival,2024-08-09 16:50:00
-2024-08-09,16:55,5X 046,UPS,SDF,HKG,Louisville Muhammad Ali International Airport,Hong Kong International Airport,At gate 17:35,arrival,2024-08-09 16:55:00
-2024-08-09,17:00,EK 9842,UAE,DWC,HKG,Al Maktoum International Airport,Hong Kong International Airport,At gate 06:02,arrival,2024-08-09 17:00:00
-2024-08-09,17:05,SQ 7860,SIA,SIN,HKG,Singapore Changi Airport,Hong Kong International Airport,At gate 17:12,arrival,2024-08-09 17:05:00
-2024-08-09,17:10,QR 8340,QTR,DOH,HKG,Hamad International Airport,Hong Kong International Airport,At gate 17:29,arrival,2024-08-09 17:10:00
-2024-08-09,17:15,YG 9177,HYT,LHW,HKG,Lanzhou Zhongchuan International Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 17:15:00
-2024-08-09,17:25,CI 6843,CAL,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,At gate 17:22,arrival,2024-08-09 17:25:00
-2024-08-09,17:30,N8 524,NCR,ORD,HKG,Chicago O'Hare International Airport,Hong Kong International Airport,At gate 20:05,arrival,2024-08-09 17:30:00
-2024-08-09,17:30,SV 976,SVA,RUH,HKG,King Khaled International Airport,Hong Kong International Airport,At gate 18:17,arrival,2024-08-09 17:30:00
-2024-08-09,17:45,2C 600,CMA,CDG,HKG,Charles de Gaulle International Airport,Hong Kong International Airport,At gate 17:39,arrival,2024-08-09 17:45:00
-2024-08-09,17:50,FX 169,FDX,MEM,HKG,Memphis International Airport,Hong Kong International Airport,At gate 17:49,arrival,2024-08-09 17:50:00
-2024-08-09,18:50,5Y 9110,GTI,AXJ,HKG,Amakusa Airport,Hong Kong International Airport,At gate 19:11,arrival,2024-08-09 18:50:00
-2024-08-09,18:55,7L 571,AZG,GYD,HKG,Heydar Aliyev International Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 18:55:00
-2024-08-09,19:30,3S 524,BOX,LEJ,HKG,Leipzig/Halle Airport,Hong Kong International Airport,At gate 19:52,arrival,2024-08-09 19:30:00
-2024-08-09,19:45,QF 7525,QFA,SYD,HKG,Sydney Kingsford Smith International Airport,Hong Kong International Airport,At gate 19:46,arrival,2024-08-09 19:45:00
-2024-08-09,20:00,QR 8088,QTR,DOH,HKG,Hamad International Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 20:00:00
-2024-08-09,20:05,AK 8008,AXM,BKI,HKG,Kota Kinabalu International Airport,Hong Kong International Airport,At gate 21:09,arrival,2024-08-09 20:05:00
-2024-08-09,20:05,5Y 9761,GTI,ORD,HKG,Chicago O'Hare International Airport,Hong Kong International Airport,At gate 15:46 (10/08/2024),arrival,2024-08-09 20:05:00
-2024-08-09,20:15,EK 9880,UAE,DWC,HKG,Al Maktoum International Airport,Hong Kong International Airport,At gate 18:17,arrival,2024-08-09 20:15:00
-2024-08-09,20:15,RH 372,HKC,SIN,HKG,Singapore Changi Airport,Hong Kong International Airport,Cancelled,arrival,2024-08-09 20:15:00
-2024-08-09,20:30,RH 9492,HKC,IST,HKG,İstanbul Airport,Hong Kong International Airport,At gate 22:56,arrival,2024-08-09 20:30:00
-2024-08-09,21:25,ET 3790,ETH,ADD,HKG,Addis Ababa Bole International Airport,Hong Kong International Airport,At gate 02:00 (10/08/2024),arrival,2024-08-09 21:25:00
-2024-08-09,21:30,AK 8578,AXM,KCH,HKG,Kuching International Airport,Hong Kong International Airport,At gate 21:00,arrival,2024-08-09 21:30:00
-2024-08-09,21:30,7L 624,AZG,GYD,HKG,Heydar Aliyev International Airport,Hong Kong International Airport,At gate 23:02 (10/08/2024),arrival,2024-08-09 21:30:00
-2024-08-09,21:35,RH 9458,HKC,DEL,HKG,Indira Gandhi International Airport,Hong Kong International Airport,At gate 00:06 (10/08/2024),arrival,2024-08-09 21:35:00
-2024-08-09,22:00,7L 1922,AZG,GYD,HKG,Heydar Aliyev International Airport,Hong Kong International Airport,At gate 02:27 (10/08/2024),arrival,2024-08-09 22:00:00
-2024-08-09,22:10,CX 3275,CPA,IAH,HKG,George Bush Intercontinental Houston Airport,Hong Kong International Airport,At gate 00:40 (10/08/2024),arrival,2024-08-09 22:10:00
-2024-08-09,22:20,CX 083,CPA,PDX,HKG,Portland International Airport,Hong Kong International Airport,At gate 01:32 (10/08/2024),arrival,2024-08-09 22:20:00
-2024-08-09,22:55,CX 2048,CPA,HAN,HKG,Noi Bai International Airport,Hong Kong International Airport,At gate 23:38,arrival,2024-08-09 22:55:00
-2024-08-09,23:00,BR 6089,EVA,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,At gate 22:16,arrival,2024-08-09 23:00:00
-2024-08-09,23:20,ES 723,DHX,BAH,HKG,Bahrain International Airport,Hong Kong International Airport,At gate 23:06,arrival,2024-08-09 23:20:00
-2024-08-09,23:25,K4 281,CKS,LAX,HKG,Los Angeles International Airport,Hong Kong International Airport,At gate 22:48,arrival,2024-08-09 23:25:00
-2024-08-09,23:40,SV 982,SVA,JED,HKG,King Abdulaziz International Airport,Hong Kong International Airport,At gate 00:56 (10/08/2024),arrival,2024-08-09 23:40:00
-2024-08-09,23:55,CX 025,CPA,TPE,HKG,Taiwan Taoyuan International Airport,Hong Kong International Airport,At gate 23:15,arrival,2024-08-09 23:55:00
-2024-08-09,00:15,WW 891,KXP,HKG,KUL,Hong Kong International Airport,Kuala Lumpur International Airport,Dep 03:35,departure,2024-08-09 00:15:00
-2024-08-09,00:20,CX 065,CPA,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Dep 00:45,departure,2024-08-09 00:20:00
-2024-08-09,01:00,FX 9741,FDX,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 00:35,departure,2024-08-09 01:00:00
-2024-08-09,01:00,RH 4568,HKC,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,Dep 04:17,departure,2024-08-09 01:00:00
-2024-08-09,01:00,CX 006,CPA,HKG,NRT,Hong Kong International Airport,Narita International Airport,Dep 01:22,departure,2024-08-09 01:00:00
-2024-08-09,01:05,EK 9785,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Dep 00:32,departure,2024-08-09 01:05:00
-2024-08-09,01:25,5Y 8673,GTI,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 01:56,departure,2024-08-09 01:25:00
-2024-08-09,01:25,RH 829,HKC,HKG,PVG,Hong Kong International Airport,Shanghai Pudong International Airport,Cancelled,departure,2024-08-09 01:25:00
-2024-08-09,01:30,RH 351,HKC,HKG,MNL,Hong Kong International Airport,Ninoy Aquino International Airport,Dep 01:01,departure,2024-08-09 01:30:00
-2024-08-09,01:30,CX 096,CPA,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 01:34,departure,2024-08-09 01:30:00
-2024-08-09,01:30,QR 8087,QTR,HKG,DOH,Hong Kong International Airport,Hamad International Airport,Dep 04:46,departure,2024-08-09 01:30:00
-2024-08-09,02:00,5Y 8783,GTI,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Cancelled,departure,2024-08-09 02:00:00
-2024-08-09,02:15,ET 3719,ETH,HKG,ADD,Hong Kong International Airport,Addis Ababa Bole International Airport,Cancelled,departure,2024-08-09 02:15:00
-2024-08-09,02:25,KZ 202,NCA,HKG,NRT,Hong Kong International Airport,Narita International Airport,Dep 02:25,departure,2024-08-09 02:25:00
-2024-08-09,02:30,NH 8512,ANA,HKG,NRT,Hong Kong International Airport,Narita International Airport,Dep 02:25,departure,2024-08-09 02:30:00
-2024-08-09,02:40,SV 987,SVA,HKG,RUH,Hong Kong International Airport,King Khaled International Airport,Dep 04:50,departure,2024-08-09 02:40:00
-2024-08-09,03:00,CI 5826,CAL,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,Dep 04:36,departure,2024-08-09 03:00:00
-2024-08-09,03:05,CX 072,CPA,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 04:25,departure,2024-08-09 03:05:00
-2024-08-09,03:05,KE 314,KAL,HKG,ICN,Hong Kong International Airport,Incheon International Airport,Dep 02:47,departure,2024-08-09 03:05:00
-2024-08-09,03:10,LD 204,AHK,HKG,KIX,Hong Kong International Airport,Kansai International Airport,Dep 03:28,departure,2024-08-09 03:10:00
-2024-08-09,03:15,LD 128,AHK,HKG,ICN,Hong Kong International Airport,Incheon International Airport,Dep 03:57,departure,2024-08-09 03:15:00
-2024-08-09,03:20,LD 720,AHK,HKG,CTU,Hong Kong International Airport,Chengdu Shuangliu International Airport,Dep 06:12,departure,2024-08-09 03:20:00
-2024-08-09,03:20,BR 6538,EVA,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,Dep 03:17,departure,2024-08-09 03:20:00
-2024-08-09,03:25,LD 208,AHK,HKG,NRT,Hong Kong International Airport,Narita International Airport,Dep 03:37,departure,2024-08-09 03:25:00
-2024-08-09,03:25,LD 327,AHK,HKG,SIN,Hong Kong International Airport,Singapore Changi Airport,Dep 03:28,departure,2024-08-09 03:25:00
-2024-08-09,03:25,LD 768,AHK,HKG,PEK,Hong Kong International Airport,Beijing Capital International Airport,Dep 03:21,departure,2024-08-09 03:25:00
-2024-08-09,03:30,LD 216,AHK,HKG,NGO,Hong Kong International Airport,Chubu Centrair International Airport,Dep 03:37,departure,2024-08-09 03:30:00
-2024-08-09,03:30,8K 526,KMI,HKG,BKK,Hong Kong International Airport,Suvarnabhumi Airport,Dep 03:47,departure,2024-08-09 03:30:00
-2024-08-09,03:35,LD 457,AHK,HKG,MNL,Hong Kong International Airport,Ninoy Aquino International Airport,Dep 04:30,departure,2024-08-09 03:35:00
-2024-08-09,03:40,LD 831,AHK,HKG,BKK,Hong Kong International Airport,Suvarnabhumi Airport,Dep 03:47,departure,2024-08-09 03:40:00
-2024-08-09,03:40,LD 782,AHK,HKG,PVG,Hong Kong International Airport,Shanghai Pudong International Airport,Dep 03:56,departure,2024-08-09 03:40:00
-2024-08-09,03:45,LD 561,AHK,HKG,SGN,Hong Kong International Airport,Tan Son Nhat International Airport,Dep 04:13,departure,2024-08-09 03:45:00
-2024-08-09,03:45,TH 3508,RMY,HKG,KUL,Hong Kong International Airport,Kuala Lumpur International Airport,Dep 04:06,departure,2024-08-09 03:45:00
-2024-08-09,03:50,K4 287,CKS,HKG,LAX,Hong Kong International Airport,Los Angeles International Airport,Dep 03:59,departure,2024-08-09 03:50:00
-2024-08-09,04:05,LD 391,AHK,HKG,PEN,Hong Kong International Airport,Penang International Airport,Dep 04:16,departure,2024-08-09 04:05:00
-2024-08-09,04:10,LD 680,AHK,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,Dep 04:20,departure,2024-08-09 04:10:00
-2024-08-09,04:25,HJ 022,TMN,HKG,SYD,Hong Kong International Airport,Sydney Kingsford Smith International Airport,Dep 08:23,departure,2024-08-09 04:25:00
-2024-08-09,05:00,MB 480,MNB,HKG,CRZ,Hong Kong International Airport,Türkmenabat International Airport,Dep 05:52,departure,2024-08-09 05:00:00
-2024-08-09,05:00,ES 736,DHX,HKG,BLR,Hong Kong International Airport,Kempegowda International Airport,Dep 05:02,departure,2024-08-09 05:00:00
-2024-08-09,05:35,3S 513,BOX,HKG,DXB,Hong Kong International Airport,Dubai International Airport,Dep 05:54,departure,2024-08-09 05:35:00
-2024-08-09,05:45,QY 549,BCS,HKG,ALA,Hong Kong International Airport,Almaty International Airport,Cancelled,departure,2024-08-09 05:45:00
-2024-08-09,05:50,RH 331,HKC,HKG,BKK,Hong Kong International Airport,Suvarnabhumi Airport,Dep 10:59,departure,2024-08-09 05:50:00
-2024-08-09,06:00,K4 643,CKS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 06:21,departure,2024-08-09 06:00:00
-2024-08-09,06:00,D0 509,DHK,HKG,BAH,Hong Kong International Airport,Bahrain International Airport,Dep 07:03,departure,2024-08-09 06:00:00
-2024-08-09,06:15,SRR183,SRR,HKG,NVI,Hong Kong International Airport,Navoi Airport,Dep 06:21,departure,2024-08-09 06:15:00
-2024-08-09,06:30,MB 581,MNB,HKG,CRZ,Hong Kong International Airport,Türkmenabat International Airport,Dep 01:02 (10/08/2024),departure,2024-08-09 06:30:00
-2024-08-09,06:45,3S 593,BOX,HKG,DEL,Hong Kong International Airport,Indira Gandhi International Airport,Dep 06:49,departure,2024-08-09 06:45:00
-2024-08-09,06:50,FX 5217,FDX,HKG,LGG,Hong Kong International Airport,Liège Airport,Dep 07:43,departure,2024-08-09 06:50:00
-2024-08-09,06:50,CX 2058,CPA,HKG,PVG,Hong Kong International Airport,Shanghai Pudong International Airport,Dep 07:06,departure,2024-08-09 06:50:00
-2024-08-09,06:55,K4 671,CKS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 07:44,departure,2024-08-09 06:55:00
-2024-08-09,07:00,HC 311,HGO,HKG,MCT,Hong Kong International Airport,Muscat International Airport,Dep 07:10,departure,2024-08-09 07:00:00
-2024-08-09,07:00,N8 525,NCR,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 09:06,departure,2024-08-09 07:00:00
-2024-08-09,07:00,K4 615,CKS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 07:28,departure,2024-08-09 07:00:00
-2024-08-09,07:00,MA 503,EAU,HKG,MCT,Hong Kong International Airport,Muscat International Airport,Dep 08:17,departure,2024-08-09 07:00:00
-2024-08-09,07:05,5Y 8127,GTI,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 15:35,departure,2024-08-09 07:05:00
-2024-08-09,07:05,CI 5828,CAL,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,Cancelled,departure,2024-08-09 07:05:00
-2024-08-09,07:05,QR 8409,QTR,HKG,DOH,Hong Kong International Airport,Hamad International Airport,Dep 07:44,departure,2024-08-09 07:05:00
-2024-08-09,07:55,3S 514,BOX,HKG,CVG,Hong Kong International Airport,Cincinnati Northern Kentucky International Airport,Dep 10:50,departure,2024-08-09 07:55:00
-2024-08-09,08:30,8V 580,ACP,HKG,DEL,Hong Kong International Airport,Indira Gandhi International Airport,Dep 15:42,departure,2024-08-09 08:30:00
-2024-08-09,08:30,KD 215,WGN,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 14:56,departure,2024-08-09 08:30:00
-2024-08-09,08:50,CX 037,CPA,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Dep 09:06,departure,2024-08-09 08:50:00
-2024-08-09,09:30,LD 9683,AHK,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Cancelled,departure,2024-08-09 09:30:00
-2024-08-09,10:05,EK 9239,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Dep 09:29,departure,2024-08-09 10:05:00
-2024-08-09,10:05,O3 268,CSS,HKG,NGB,Hong Kong International Airport,Ningbo Lishe International Airport,Dep 10:43,departure,2024-08-09 10:05:00
-2024-08-09,10:10,TK 6101,THY,HKG,IST,Hong Kong International Airport,İstanbul Airport,Dep 12:13,departure,2024-08-09 10:10:00
-2024-08-09,10:10,RH 371,HKC,HKG,SIN,Hong Kong International Airport,Singapore Changi Airport,Cancelled,departure,2024-08-09 10:10:00
-2024-08-09,10:15,CV 7955,CLX,HKG,ASB,Hong Kong International Airport,Ashgabat International Airport,Dep 10:44,departure,2024-08-09 10:15:00
-2024-08-09,10:15,CX 2073,CPA,HKG,SIN,Hong Kong International Airport,Singapore Changi Airport,Dep 13:03,departure,2024-08-09 10:15:00
-2024-08-09,11:35,5X 003,UPS,HKG,DXB,Hong Kong International Airport,Dubai International Airport,Dep 11:45,departure,2024-08-09 11:35:00
-2024-08-09,11:40,CV 5325,CLX,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 12:32,departure,2024-08-09 11:40:00
-2024-08-09,11:40,EK 9787,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Cancelled,departure,2024-08-09 11:40:00
-2024-08-09,11:40,EK 9887,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Dep 12:48,departure,2024-08-09 11:40:00
-2024-08-09,12:05,RH 9457,HKC,HKG,DEL,Hong Kong International Airport,Indira Gandhi International Airport,Dep 10:31,departure,2024-08-09 12:05:00
-2024-08-09,12:10,3V 400,TAY,HKG,GYD,Hong Kong International Airport,Heydar Aliyev International Airport,Dep 16:16,departure,2024-08-09 12:10:00
-2024-08-09,13:10,5Y 612,GTI,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 19:23,departure,2024-08-09 13:10:00
-2024-08-09,13:20,D3 8502,FKH,HKG,TAS,Hong Kong International Airport,Tashkent International Airport,Dep 13:34,departure,2024-08-09 13:20:00
-2024-08-09,13:30,OZ 970,AAR,HKG,ICN,Hong Kong International Airport,Incheon International Airport,Dep 15:58,departure,2024-08-09 13:30:00
-2024-08-09,13:45,QR 8435,QTR,HKG,DOH,Hong Kong International Airport,Hamad International Airport,Dep 14:59,departure,2024-08-09 13:45:00
-2024-08-09,13:45,WW 862,KXP,HKG,KUL,Hong Kong International Airport,Kuala Lumpur International Airport,Cancelled,departure,2024-08-09 13:45:00
-2024-08-09,13:50,RH 375,HKC,HKG,LGG,Hong Kong International Airport,Liège Airport,Dep 14:05,departure,2024-08-09 13:50:00
-2024-08-09,14:20,5X 067,UPS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 14:10,departure,2024-08-09 14:20:00
-2024-08-09,14:45,EY 926,ETD,HKG,AUH,Hong Kong International Airport,Abu Dhabi International Airport,Dep 15:08,departure,2024-08-09 14:45:00
-2024-08-09,15:00,T8 4704,TVR,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Dep 15:28,departure,2024-08-09 15:00:00
-2024-08-09,15:00,CX 039,CPA,HKG,BOM,Hong Kong International Airport,Chhatrapati Shivaji International Airport,Dep 15:36,departure,2024-08-09 15:00:00
-2024-08-09,15:10,EK 9789,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Cancelled,departure,2024-08-09 15:10:00
-2024-08-09,15:30,CC 3565,ABD,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Dep 08:05 (10/08/2024),departure,2024-08-09 15:30:00
-2024-08-09,15:55,KE 9314,KAL,HKG,ICN,Hong Kong International Airport,Incheon International Airport,Dep 15:52,departure,2024-08-09 15:55:00
-2024-08-09,16:00,K4 685,CKS,HKG,ICN,Hong Kong International Airport,Incheon International Airport,Cancelled,departure,2024-08-09 16:00:00
-2024-08-09,16:00,CX 094,CPA,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 17:45,departure,2024-08-09 16:00:00
-2024-08-09,16:05,5X 061,UPS,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,Dep 16:17,departure,2024-08-09 16:05:00
-2024-08-09,16:10,PO 916,PAC,HKG,ICN,Hong Kong International Airport,Incheon International Airport,Cancelled,departure,2024-08-09 16:10:00
-2024-08-09,16:25,3S 509,BOX,HKG,LEJ,Hong Kong International Airport,Leipzig/Halle Airport,Dep 16:51,departure,2024-08-09 16:25:00
-2024-08-09,16:30,FX 9732,FDX,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 16:33,departure,2024-08-09 16:30:00
-2024-08-09,16:55,CX 2049,CPA,HKG,HAN,Hong Kong International Airport,Noi Bai International Airport,Dep 17:52,departure,2024-08-09 16:55:00
-2024-08-09,17:30,CV 5935,CLX,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 17:44,departure,2024-08-09 17:30:00
-2024-08-09,17:45,EK 9283,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Dep 09:32 (10/08/2024),departure,2024-08-09 17:45:00
-2024-08-09,17:50,5Y 8139,GTI,HKG,DEL,Hong Kong International Airport,Indira Gandhi International Airport,Dep 21:48,departure,2024-08-09 17:50:00
-2024-08-09,18:00,MH 6113,MAS,HKG,KUL,Hong Kong International Airport,Kuala Lumpur International Airport,Dep 18:20,departure,2024-08-09 18:00:00
-2024-08-09,18:35,D0 001,DHK,HKG,NGO,Hong Kong International Airport,Chubu Centrair International Airport,Dep 18:36,departure,2024-08-09 18:35:00
-2024-08-09,18:40,5C 1852,ICL,HKG,ALA,Hong Kong International Airport,Almaty International Airport,Cancelled,departure,2024-08-09 18:40:00
-2024-08-09,18:45,YG 9178,HYT,HKG,LHW,Hong Kong International Airport,Lanzhou Zhongchuan International Airport,Cancelled,departure,2024-08-09 18:45:00
-2024-08-09,18:55,CX 026,CPA,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,Dep 18:57,departure,2024-08-09 18:55:00
-2024-08-09,19:05,SQ 7366,SIA,HKG,SHJ,Hong Kong International Airport,Sharjah International Airport,Dep 19:02,departure,2024-08-09 19:05:00
-2024-08-09,19:15,SV 977,SVA,HKG,JED,Hong Kong International Airport,King Abdulaziz International Airport,Dep 19:57,departure,2024-08-09 19:15:00
-2024-08-09,19:15,QR 8341,QTR,HKG,DOH,Hong Kong International Airport,Hamad International Airport,Dep 20:13,departure,2024-08-09 19:15:00
-2024-08-09,19:15,QR 8405,QTR,HKG,DOH,Hong Kong International Airport,Hamad International Airport,Cancelled,departure,2024-08-09 19:15:00
-2024-08-09,19:15,EK 9843,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Dep 08:48,departure,2024-08-09 19:15:00
-2024-08-09,19:25,5X 063,UPS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 19:13,departure,2024-08-09 19:25:00
-2024-08-09,19:30,CI 6844,CAL,HKG,TPE,Hong Kong International Airport,Taiwan Taoyuan International Airport,Dep 21:08,departure,2024-08-09 19:30:00
-2024-08-09,19:50,5X 059,UPS,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 19:37,departure,2024-08-09 19:50:00
-2024-08-09,20:05,RH 317,HKC,HKG,HAN,Hong Kong International Airport,Noi Bai International Airport,Dep 19:46,departure,2024-08-09 20:05:00
-2024-08-09,20:15,SQ 7859,SIA,HKG,SIN,Hong Kong International Airport,Singapore Changi Airport,Dep 19:37,departure,2024-08-09 20:15:00
-2024-08-09,20:30,CX 2092,CPA,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 20:43,departure,2024-08-09 20:30:00
-2024-08-09,20:35,CV 5165,CLX,HKG,ANC,Hong Kong International Airport,Ted Stevens Anchorage International Airport,Dep 23:27,departure,2024-08-09 20:35:00
-2024-08-09,21:05,CX 090,CPA,HKG,LAX,Hong Kong International Airport,Los Angeles International Airport,Dep 20:58,departure,2024-08-09 21:05:00
-2024-08-09,21:10,2C 601,CMA,HKG,CDG,Hong Kong International Airport,Charles de Gaulle International Airport,Dep 21:42,departure,2024-08-09 21:10:00
-2024-08-09,21:15,QF 7526,QFA,HKG,SYD,Hong Kong International Airport,Sydney Kingsford Smith International Airport,Dep 21:31,departure,2024-08-09 21:15:00
-2024-08-09,21:25,AK 8011,AXM,HKG,KUL,Hong Kong International Airport,Kuala Lumpur International Airport,Dep 22:30,departure,2024-08-09 21:25:00
-2024-08-09,21:40,FX 5986,FDX,HKG,MEM,Hong Kong International Airport,Memphis International Airport,Dep 21:37,departure,2024-08-09 21:40:00
-2024-08-09,21:45,LH 8467,GEC,HKG,FRA,Hong Kong International Airport,Frankfurt am Main Airport,Dep 22:17,departure,2024-08-09 21:45:00
-2024-08-09,22:00,QR 8089,QTR,HKG,DOH,Hong Kong International Airport,Hamad International Airport,Cancelled,departure,2024-08-09 22:00:00
-2024-08-09,22:05,7L 572,AZG,HKG,GYD,Hong Kong International Airport,Heydar Aliyev International Airport,Cancelled,departure,2024-08-09 22:05:00
-2024-08-09,22:20,FX 5391,FDX,HKG,KIX,Hong Kong International Airport,Kansai International Airport,Dep 22:18,departure,2024-08-09 22:20:00
-2024-08-09,23:00,AK 8579,AXM,HKG,KUL,Hong Kong International Airport,Kuala Lumpur International Airport,Dep 22:57,departure,2024-08-09 23:00:00
-2024-08-09,23:00,ET 3219,ETH,HKG,ADD,Hong Kong International Airport,Addis Ababa Bole International Airport,Dep 04:23 (10/08/2024),departure,2024-08-09 23:00:00
-2024-08-09,23:05,EK 9881,UAE,HKG,DWC,Hong Kong International Airport,Al Maktoum International Airport,Dep 20:23,departure,2024-08-09 23:05:00
-2024-08-09,23:30,7L 625,AZG,HKG,GYD,Hong Kong International Airport,Heydar Aliyev International Airport,Dep 01:06 (11/08/2024),departure,2024-08-09 23:30:00
