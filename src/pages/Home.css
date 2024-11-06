@@ -1,36 +1,161 @@
-.container {
-    padding: 40px;
-    margin: auto;
-    width: 40%;
-}
-
-.pagination {
-    display: flex;
-    justify-content: flex-start;
-    list-style: none;
-    cursor: pointer;
-    border-radius: 1rem;
-}
-.pagination a {
-    padding: 10px;
-    border: 1px solid rgb(137, 203, 243);
-    color: rgb(137, 203, 243);
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-}
-
-.pagination__link {
+:root {
+    /* Brand Colors */
+    --cathay-jade: rgb(0, 101, 100);        /* Primary brand color */
+    --cathay-white: rgb(255, 255, 255);     /* White */
+    --cathay-medium-jade: rgb(54, 125, 121); /* Secondary brand color */
+    --cathay-sand: rgb(193, 180, 154);      /* Accent color */
+    --cathay-light-sand: rgb(220, 211, 188); /* Light accent */
+    --cathay-slate: rgb(198, 194, 193);     /* Neutral */
+    --cathay-light-slate: rgb(235, 237, 236); /* Light neutral */
+  
+    /* Functional Colors */
+    --text-primary: var(--cathay-jade);
+    --text-secondary: var(--cathay-medium-jade);
+    --text-disabled: var(--cathay-slate);
+    --border-color: var(--cathay-jade);
+    --background-light: var(--cathay-light-slate);
+    --background-white: var(--cathay-white);
+    
+    /* Transparencies */
+    --primary-transparent: rgba(0, 101, 100, 0.1);
+    
+    /* Shadows */
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Base dashboard styles */
+  .detail-wrapper {
+    padding: 2rem;
+    background-color: var(--background-light);
+  }
+  
+  .dashboard-title {
+    font-size: 2rem;
     font-weight: bold;
-}
-
-.pagination__link--active a {
-    color: #fff;
-    background: rgb(137, 203, 243);
-}
-
-.pagination__link--disabled a {
-    color: rgb(198,197,202);
-    border: 1px solid rgb(198,197,202);
-}
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .chart-container {
+    background: var(--background-white);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+  }
+  
+  .chart-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+  
+  .chart {
+    height: 300px;
+  }
+  
+  .metrics-container {
+    background: var(--background-white);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+  }
+  
+  .metrics-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+  
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .metric-item {
+    text-align: center;
+  }
+  
+  .metric-item h3 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .metric-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+  }
+  
+  /* Pagination styles */
+  .container {
+      padding: 40px;
+      margin: auto;
+      width: 40%;
+  }
+  
+  .pagination {
+      display: flex;
+      justify-content: flex-start;
+      list-style: none;
+      cursor: pointer;
+      border-radius: 1rem;
+  }
+  
+  .pagination a {
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      border-radius: 5px;
+      margin: 0 2px;
+      transition: all 0.3s ease;
+  }
+  
+  .pagination a:hover {
+      background-color: var(--cathay-primary);
+      color: var(--background-white);
+  }
+  
+  .pagination__link {
+      font-weight: bold;
+  }
+  
+  .pagination__link--active a {
+      color: var(--background-white);
+      background: var(--cathay-primary);
+  }
+  
+  .pagination__link--disabled a {
+      color: var(--text-disabled);
+      border: 1px solid var(--text-disabled);
+      cursor: not-allowed;
+  }
+  
+  .pagination__link--disabled a:hover {
+      background-color: transparent;
+      color: var(--text-disabled);
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .metrics {
+      grid-template-columns: 1fr;
+    }
+  
+    .container {
+      width: 90%;
+      padding: 20px;
+    }
+  }

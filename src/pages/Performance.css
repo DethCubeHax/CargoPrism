@@ -1,0 +1,107 @@
+.performance-wrapper {
+    padding: 2rem;
+    background-color: #f8f9fa;
+  }
+  
+  .performance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .performance-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2d3748;
+  }
+  
+  .metrics-overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .metric-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .metric-card h3 {
+    font-size: 0.875rem;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+  }
+  
+  .metric-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+  }
+  
+  .metric-change {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .metric-change.positive {
+    color: #48bb78;
+  }
+  
+  .metric-change.negative {
+    color: #f56565;
+  }
+  
+  .charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .chart-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .chart-container.full-width {
+    grid-column: 1 / -1;
+  }
+  
+  .chart-container h2 {
+    font-size: 1.125rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+  }
+  
+  .chart {
+    height: 300px;
+    position: relative;
+  }
+  
+  .period-selector {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  @media (max-width: 1200px) {
+    .metrics-overview {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .charts-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .chart-container.full-width {
+      grid-column: auto;
+    }
+  }
