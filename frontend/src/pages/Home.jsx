@@ -27,28 +27,66 @@ ChartJS.register(
 );
 
 function DataTable({ data }) {
+  const [currentPage, setCurrentPage] = useState(0);
+  const rowsPerPage = 4;
+  const totalPages = Math.ceil(data.datasets.length / rowsPerPage);
+
+  const getCurrentPageData = () => {
+    const start = currentPage * rowsPerPage;
+    return data.datasets.slice(start, start + rowsPerPage);
+  };
+
   return (
-    <table className="data-table">
-      <thead>
-        <tr>
-          {data.labels.map((label, index) => (
-            <th key={index}>{label}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {data.datasets.map((row, index) => (
-          <tr key={index}>
-            {row.map((cell, i) => (
-              <td key={i}>{cell}</td>
-            ))}
+    <div className="table-wrapper">
+      <table className="data-table">
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>No.1</th>
+            <th>No.2</th>
+            <th>No.3</th>
+            <th>No.4</th>
+            <th>No.5</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {getCurrentPageData().map((row, index) => {
+            const date = row[0];
+            const top5 = row.slice(1, 6);
+            
+            return (
+              <tr key={index}>
+                <td>{date}</td>
+                {top5.map((airline, i) => (
+                  <td key={i}>{airline}</td>
+                ))}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      <div className="pagination">
+        <button 
+          className="pagination-button"
+          onClick={() => setCurrentPage(prev => prev - 1)}
+          disabled={currentPage === 0}
+        >
+          Previous
+        </button>
+        <span className="page-info">
+          Page {currentPage + 1} of {totalPages}
+        </span>
+        <button 
+          className="pagination-button"
+          onClick={() => setCurrentPage(prev => prev + 1)}
+          disabled={currentPage >= totalPages - 1}
+        >
+          Next
+        </button>
+      </div>
+    </div>
   );
 }
-
 
 function Home() {
   const [frequencyData, setFrequencyData] = useState({
@@ -62,7 +100,7 @@ function Home() {
   });
 
   const [top10Data, setTop10Data] = useState({
-    labels: ['Week', 'No.1', 'No.2', 'No.3', 'No.4', 'No.5', 'No.6', 'No.7', 'No.8', 'No.9', 'No.10'],
+    labels: ['Week', 'No.1', 'No.2', 'No.3', 'No.4', 'No.5'],
     datasets: []
   });
 
@@ -113,20 +151,22 @@ function Home() {
             }
           ]
         });
-      
-      // Preparing columns for the data table or chart
-      const columns = ["Date", ...data.columns];
 
-      // Formatting data by combining dates with data entries
-      const formattedData = data.index.map((date, index) => {
-        return [date, ...data.data[index]];
-      });
+        // Parse the weekly_top_10 JSON string
+        const top10 = JSON.parse(data.weekly_top_10);
+        
+        // Now you can access the columns
+        const columns = ["Date", ...top10.columns];
 
-      // Example of setting data for a chart or data table component
-      setTop10Data({
+        // Formatting data by combining dates with data entries
+        const formattedData = top10.index.map((date, index) => {
+          return [date, ...top10.data[index]];
+        });
+
+        setTop10Data({
           labels: columns,
           datasets: formattedData
-      });
+        });
       })
       .catch(error => {
         console.error('Error fetching data:', error);
