@@ -26,6 +26,29 @@ ChartJS.register(
   Legend
 );
 
+function DataTable({ data }) {
+  return (
+    <table className="data-table">
+      <thead>
+        <tr>
+          {data.labels.map((label, index) => (
+            <th key={index}>{label}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {data.datasets.map((row, index) => (
+          <tr key={index}>
+            {row.map((cell, i) => (
+              <td key={i}>{cell}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
 
 function Home() {
   const [frequencyData, setFrequencyData] = useState({
@@ -39,7 +62,7 @@ function Home() {
   });
 
   const [top10Data, setTop10Data] = useState({
-    labels: [],
+    labels: ['Week', 'No.1', 'No.2', 'No.3', 'No.4', 'No.5', 'No.6', 'No.7', 'No.8', 'No.9', 'No.10'],
     datasets: []
   });
 
@@ -85,21 +108,25 @@ function Home() {
             },
             {
               label: 'All',
-              data: data.ALL_weekly_cod_percentag,
+              data: data.ALL_weekly_cod_percentage,
               ...chartTheme.datasetStyles.bar
             }
           ]
         });
-        setTop10Data({
-          labels: data.Name_top_10,
-          datasets: [
-            {
-              label: 'Top 10 Routes',
-              data: data.Value_top_10,
-              ...chartTheme.datasetStyles.bar
-            }
-          ]
-        });
+      
+      // Preparing columns for the data table or chart
+      const columns = ["Date", ...data.columns];
+
+      // Formatting data by combining dates with data entries
+      const formattedData = data.index.map((date, index) => {
+        return [date, ...data.data[index]];
+      });
+
+      // Example of setting data for a chart or data table component
+      setTop10Data({
+          labels: columns,
+          datasets: formattedData
+      });
       })
       .catch(error => {
         console.error('Error fetching data:', error);
@@ -160,7 +187,7 @@ function Home() {
         <div className="chart-container">
           <h2>Weekly Top 10</h2>
           <div className="chart">
-            <Bar data={top10Data} options={chartTheme.defaultOptions} />
+            <DataTable data={top10Data} />
           </div>
         </div>
 

@@ -48,14 +48,20 @@ def overview():
         condition_cx_cod = (df['airline'] == 'CPA') & (df['status'].isin(['Cancelled', 'Delayed']))
         cx_weekly_cod_flights = df[condition_cx_cod].resample('W').size()
         cx_cod_percentage = ((cx_weekly_cod_flights / cx_weekly_counts.replace(0, pd.NA)) * 100).fillna(0)
+
         weekly_cod_flights = df[df['status'].isin(['Cancelled', 'Delayed'])].resample('W').size()
         all_cod_percentage = ((weekly_cod_flights/all_weekly_counts.replace(0, pd.NA))*100).fillna(0)
 
         # weekly top 10
         weekly_top_10 = df['airline'].resample('W').apply(
-            lambda x: x.value_counts().head(10).to_dict()
+            lambda x: ", ".join(f"{idx}({v})" for idx, v in x.value_counts().head(10).items())
         )
-        
+        df_split = weekly_top_10.str.split(", ", expand=True)
+        column_names = [f"No.{i}" for i in range(1, df_split.shape[1] + 1)]
+        df_split.columns = column_names
+        weekly_top_10 = df_split
+        weekly_top_10.index = weekly_top_10.index.strftime('%Y-%m-%d')
+
         # Preparing data for JSON serialization
         return {
             "dates": cx_weekly_counts.index.strftime('%Y-%m-%d').tolist(),  # Format dates as strings
@@ -66,8 +72,7 @@ def overview():
             "CX_weekly_cod_percentage": cx_cod_percentage.tolist(),
             "ALL_weekly_cod_percentage": all_cod_percentage.tolist(),
             # Weekly Top 10 Table
-            "Name_top_10": [list(week.keys()) for week in weekly_top_10],
-            "Value_top_10": [list(week.values()) for week in weekly_top_10]
+            "weekly_top_10": weekly_top_10.to_json(orient='split')
 
         }
     
