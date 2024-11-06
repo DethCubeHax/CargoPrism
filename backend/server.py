@@ -17,3 +17,19 @@ def hkia():
             "mostFreqAirlines": df['airline'].value_counts().head().to_dict(), 
             "avgDailyFlights": daily_flights.mean().to_dict()
         }
+
+# @app.get("/overview")
+# def overview():
+#     df = update_flights_database()
+    
+#     if not df.empty:
+#         daily_flights = df.groupby(['date', 'flight_type']).size().unstack(fill_value=0)
+        
+#         return {
+#             "totalNumOfFlights": len(df), 
+#             "totalNumOfCXDaily": df[df['airline'] == 'CX'].groupby('date').size(),  
+#             "totalNumOfOtherDaily": df[df['airline'] != 'CX'].groupby('date').size(),  
+#             "activeRoutes": , 
+#             "cancellationRate":           
+#         }
+    
