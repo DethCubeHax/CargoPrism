@@ -4,11 +4,10 @@ import requests
 import pandas as pd
 from datetime import datetime, timedelta
 import os
-import time
 
 app = FastAPI()
 
-def get_hk_flights(date, flight_type='arrival', max_retries=3):
+def get_hk_flights(date, flight_type='arrival'):
     """
     Get flights data for a specific date and type (arrival/departure)
     """
@@ -20,74 +19,67 @@ def get_hk_flights(date, flight_type='arrival', max_retries=3):
     is_arrival = 'true' if flight_type == 'arrival' else 'false'
     api_url = f'https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?date={date}&lang=en&cargo=true&arrival={is_arrival}'
     
-    for attempt in range(max_retries):
-        try:
-            response = requests.get(api_url)
+    try:
+        response = requests.get(api_url)
+        
+        if response.status_code == 200:
+            data = response.json()
+            rows = []
             
-            if response.status_code == 200:
-                data = response.json()
-                rows = []
-                
-                # Check if the response contains actual flight data
-                if not data or not data[0].get('list'):
-                    return None
-                
-                for date_entry in data:
-                    date = date_entry['date']
-                    for flight in date_entry['list']:
-                        time = flight['time']
-                        status = flight['status']
-                        
-                        for f in flight['flight']:
-                            flight_no = f['no']
-                            airline = f['airline']
-                            
-                            # Handle origins/destinations
-                            if flight_type == 'arrival':
-                                locations = ', '.join(flight['origin'])
-                                location_type = 'origin'
-                            else:
-                                locations = ', '.join(flight['destination']) if 'destination' in flight else ''
-                                location_type = 'destination'
-                            
-                            row = {
-                                'date': date,
-                                'time': time,
-                                'flight_no': flight_no,
-                                'airline': airline,
-                                location_type: locations,
-                                'status': status,
-                                'flight_type': flight_type
-                            }
-                            rows.append(row)
-                
-                if rows:
-                    df = pd.DataFrame(rows)
-                    df['datetime'] = pd.to_datetime(df['date'] + ' ' + df['time'])
-                    df = df.sort_values('datetime', ascending=True)
-                    df = df.reset_index(drop=True)
-                    
-                    # Order columns based on flight type
-                    if flight_type == 'arrival':
-                        columns = ['date', 'time', 'flight_no', 'airline', 'origin', 'status', 'flight_type', 'datetime']
-                    else:
-                        columns = ['date', 'time', 'flight_no', 'airline', 'destination', 'status', 'flight_type', 'datetime']
-                    
-                    df = df[columns]
-                    return df
+            # Check if the response contains actual flight data
+            if not data or not data[0].get('list'):
                 return None
-            else:
-                print(f"Failed to retrieve {flight_type} data for {date}. Status code: {response.status_code}")
-                if attempt < max_retries - 1:
-                    time.sleep(2)  # Wait 2 seconds before retrying
-                continue
-        except Exception as e:
-            print(f"Error retrieving data for {date}: {str(e)}")
-            if attempt < max_retries - 1:
-                time.sleep(2)  # Wait 2 seconds before retrying
-            continue
-    
-    return None
+            
+            for date_entry in data:
+                date = date_entry['date']
+                for flight in date_entry['list']:
+                    flight_time = flight['time']
+                    status = flight['status']
+                    
+                    for f in flight['flight']:
+                        flight_no = f['no']
+                        airline = f['airline']
+                        
+                        # Handle origins/destinations
+                        if flight_type == 'arrival':
+                            locations = ', '.join(flight['origin'])
+                            location_type = 'origin'
+                        else:
+                            locations = ', '.join(flight['destination']) if 'destination' in flight else ''
+                            location_type = 'destination'
+                        
+                        row = {
+                            'date': date,
+                            'time': flight_time,
+                            'flight_no': flight_no,
+                            'airline': airline,
+                            location_type: locations,
+                            'status': status,
+                            'flight_type': flight_type
+                        }
+                        rows.append(row)
+            
+            if rows:
+                df = pd.DataFrame(rows)
+                df['datetime'] = pd.to_datetime(df['date'] + ' ' + df['time'])
+                df = df.sort_values('datetime', ascending=True)
+                df = df.reset_index(drop=True)
+                
+                # Order columns based on flight type
+                if flight_type == 'arrival':
+                    columns = ['date', 'time', 'flight_no', 'airline', 'origin', 'status', 'flight_type', 'datetime']
+                else:
+                    columns = ['date', 'time', 'flight_no', 'airline', 'destination', 'status', 'flight_type', 'datetime']
+                
+                df = df[columns]
+                return df
+            return None
+        else:
+            print(f"Failed to retrieve {flight_type} data for {date}. Status code: {response.status_code}")
+            return None
+    except Exception as e:
+        print(f"Error retrieving data for {date}: {str(e)}")
+        return None
 
 def update_flights_database(filename='hk_flights_database_historical.csv', max_empty_days=7):
     start_date = datetime.now()
@@ -110,6 +102,11 @@ def update_flights_database(filename='hk_flights_database_historical.csv', max_e
     new_data_frames = []
     
     while empty_days_count < max_empty_days:
+        # Check if we've gone beyond 89 days
+        if (start_date - current_date).days > 89:
+            print("\nReached 89 days limit. Stopping data collection.")
+            break
+            
         date_str = current_date.strftime('%Y-%m-%d')
         print(f"\nFetching data for {date_str}...")
         
@@ -193,19 +190,12 @@ def hkia():
     df = update_flights_database()
     
     if not df.empty:
-        # print("\nFinal Database Statistics:")
-        # print(f"Total number of flights: {len(df)}")
-        # print(f"Number of unique airlines: {df['airline'].nunique()}")
-        # print(f"Date range: {df['date'].min()} to {df['date'].max()}")
-        
-        # print("\nFlights by type:")
-        # print(df['flight_type'].value_counts())
-        
-        # print("\nMost frequent airlines:")
-        # print(df['airline'].value_counts().head())
-        
-        # print("\nAverage daily flights:")
         daily_flights = df.groupby(['date', 'flight_type']).size().unstack(fill_value=0)
-        # print(daily_flights.mean())
-        
-        return {"totalNumOfFlights": len(df), "numOfUniqueAirlines": df['airline'].nunique(), "dateRange": f"{df['date'].min()} to {df['date'].max()}", "flightsByType": df['flight_type'].value_counts(), "mostFreqAirlines": df['airline'].value_counts().head(), "avgDailyFlights": daily_flights.mean()}
+        return {
+            "totalNumOfFlights": len(df), 
+            "numOfUniqueAirlines": df['airline'].nunique(), 
+            "dateRange": f"{df['date'].min()} to {df['date'].max()}", 
+            "flightsByType": df['flight_type'].value_counts().to_dict(), 
+            "mostFreqAirlines": df['airline'].value_counts().head().to_dict(), 
+            "avgDailyFlights": daily_flights.mean().to_dict()
+        }
