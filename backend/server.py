@@ -36,13 +36,42 @@ def overview():
     
     if not df.empty:
         df['date'] = pd.to_datetime(df['date'])
+        
+        # Filter for last month only
+        last_month = df['date'].max() - timedelta(days=30)
+        df_month = df[df['date'] >= last_month]
+        
+        # Filter for CX flights only
+        cx_df = df_month[df_month['airline'] == 'CPA']
+        
+        # Calculate metrics
+        total_cx_flights = len(cx_df)
+        
+        # Calculate on-time performance
+        ontime_flights = len(cx_df[cx_df['status'] != 'Cancelled'])
+        ontime_percentage = (ontime_flights / total_cx_flights * 100) if total_cx_flights > 0 else 0
+        
+        # Calculate active routes (unique origin-destination pairs)
+        active_routes = len(cx_df[['origin', 'destination']].drop_duplicates())
+        
+        # Calculate cancellation rate
+        cancelled_flights = len(cx_df[cx_df['status'] == 'Cancelled'])
+        cancellation_rate = (cancelled_flights / total_cx_flights * 100) if total_cx_flights > 0 else 0
+        
+        # Add these metrics to a dictionary
+        metrics = {
+            "total_flights": total_cx_flights,
+            "ontime_performance": round(ontime_percentage, 1),
+            "active_routes": active_routes,
+            "cancellation_rate": round(cancellation_rate, 1)
+        }
+        
+        # Set index for existing calculations
         df.set_index('date', inplace=True)
         
         # Resampling and calculating weekly frequency
         cx_weekly_counts = df[df['airline'] == 'CPA'].resample('W').size()
         all_weekly_counts = df.resample('W').size()
-        # weekly_unique_airlines = df.resample('W').apply(lambda x: x['airline'].nunique())
-        # avg_weekly_counts = all_weekly_counts/weekly_unique_airlines
 
         # weekly perfomance: cod (cancelled or delayed) flights
         condition_cx_cod = (df['airline'] == 'CPA') & (df['status'].isin(['Cancelled', 'Delayed']))
@@ -62,17 +91,13 @@ def overview():
         weekly_top_10 = df_split
         weekly_top_10.index = weekly_top_10.index.strftime('%Y-%m-%d')
 
-        # Preparing data for JSON serialization
+        # Return all data including new metrics
         return {
-            "dates": cx_weekly_counts.index.strftime('%Y-%m-%d').tolist(),  # Format dates as strings
-            # Weekly Freq Table
+            "metrics": metrics,
+            "dates": cx_weekly_counts.index.strftime('%Y-%m-%d').tolist(),
             "CX_weekly_fq": cx_weekly_counts.tolist(),
             "ALL_weekly_fq": all_weekly_counts.tolist(),
-            # Weekly Performance Table
             "CX_weekly_cod_percentage": cx_cod_percentage.tolist(),
             "ALL_weekly_cod_percentage": all_cod_percentage.tolist(),
-            # Weekly Top 10 Table
             "weekly_top_10": weekly_top_10.to_json(orient='split')
-
         }
-    

@@ -29,11 +29,15 @@ ChartJS.register(
 function DataTable({ data }) {
   const [currentPage, setCurrentPage] = useState(0);
   const rowsPerPage = 4;
-  const totalPages = Math.ceil(data.datasets.length / rowsPerPage);
+
+  // Just reverse the array to get correct date order, and use first 5 elements
+  const sortedDatasets = [...data.datasets].reverse();
+
+  const totalPages = Math.ceil(sortedDatasets.length / rowsPerPage);
 
   const getCurrentPageData = () => {
     const start = currentPage * rowsPerPage;
-    return data.datasets.slice(start, start + rowsPerPage);
+    return sortedDatasets.slice(start, start + rowsPerPage);
   };
 
   return (
@@ -51,8 +55,10 @@ function DataTable({ data }) {
         </thead>
         <tbody>
           {getCurrentPageData().map((row, index) => {
-            const date = row[0];
-            const top5 = row.slice(1, 6);
+            // Just take the first 6 elements (date + top 5)
+            const rowData = row.slice(0, 6);
+            const date = rowData[0];
+            const top5 = rowData.slice(1);
             
             return (
               <tr key={index}>
@@ -89,6 +95,13 @@ function DataTable({ data }) {
 }
 
 function Home() {
+  const [metrics, setMetrics] = useState({
+    total_flights: 0,
+    ontime_performance: 0,
+    active_routes: 0,
+    cancellation_rate: 0
+  });
+
   const [frequencyData, setFrequencyData] = useState({
     labels: [],
     datasets: []
@@ -117,6 +130,7 @@ function Home() {
       })
       .then(data => {
         console.log('Received data:', data);
+        setMetrics(data.metrics);
         setFrequencyData({
           labels: data.dates,
           datasets: [
@@ -192,19 +206,19 @@ function Home() {
         <div className="metrics">
           <div className="metric-item">
             <h3>Total Flights</h3>
-            <p className="metric-value">1,234</p>
+            <p className="metric-value">{metrics.total_flights}</p>
           </div>
           <div className="metric-item">
             <h3>On-time Performance</h3>
-            <p className="metric-value">92.5%</p>
+            <p className="metric-value">{metrics.ontime_performance}%</p>
           </div>
           <div className="metric-item">
             <h3>Active Routes</h3>
-            <p className="metric-value">28</p>
+            <p className="metric-value">{metrics.active_routes}</p>
           </div>
           <div className="metric-item">
             <h3>Cancellation Rate</h3>
-            <p className="metric-value">2.1%</p>
+            <p className="metric-value">{metrics.cancellation_rate}%</p>
           </div>
         </div>
       </div>
