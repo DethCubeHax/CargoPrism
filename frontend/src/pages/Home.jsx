@@ -52,11 +52,15 @@ function Home() {
             {
               label: 'CX',
               data: data.CX_weekly_fq,
+              backgroundColor: 'rgb(0, 101, 100)',
+              borderColor: 'rgb(0, 101, 100)',
               ...chartTheme.datasetStyles.bar
             },
             {
               label: 'All',
               data: data.ALL_weekly_fq,
+              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              borderColor: 'rgba(255, 99, 132, 1)',
               ...chartTheme.datasetStyles.bar
             }
           ]
