@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import pandas as pd
 from flight_service import update_flights_database
 
 app = FastAPI()
@@ -18,18 +19,22 @@ def hkia():
             "avgDailyFlights": daily_flights.mean().to_dict()
         }
 
-# @app.get("/overview")
-# def overview():
-#     df = update_flights_database()
+@app.get("/overview")
+def overview():
+    df = update_flights_database()
     
-#     if not df.empty:
-#         daily_flights = df.groupby(['date', 'flight_type']).size().unstack(fill_value=0)
+    if not df.empty:
+        df['date'] = pd.to_datetime(df['date'])
+        df.set_index('date', inplace=True)
         
-#         return {
-#             "totalNumOfFlights": len(df), 
-#             "totalNumOfCXDaily": df[df['airline'] == 'CX'].groupby('date').size(),  
-#             "totalNumOfOtherDaily": df[df['airline'] != 'CX'].groupby('date').size(),  
-#             "activeRoutes": , 
-#             "cancellationRate":           
-#         }
+        # Resampling and calculating weekly frequency
+        cx_weekly_counts = df[df['airline'] == 'CPA'].resample('W').size()
+        all_weekly_counts = df.resample('W').size()
+        
+        # Preparing data for JSON serialization
+        return {
+            "dates": cx_weekly_counts.index.strftime('%Y-%m-%d').tolist(),  # Format dates as strings
+            "CX_weekly_fq": cx_weekly_counts.tolist(),
+            "ALL_weekly_fq": all_weekly_counts.tolist()
+        }
     

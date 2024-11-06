@@ -13,6 +13,7 @@ import {
 } from 'chart.js';
 import chartTheme from '../config/chartTheme';
 import './Home.css';
+import { useState, useEffect } from 'react';
 
 ChartJS.register(
   CategoryScale,
@@ -26,21 +27,33 @@ ChartJS.register(
 );
 
 function Home() {
-  const frequencyData = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-    datasets: [
-      {
-        label: 'CX',
-        data: [65, 59, 80, 81, 56, 55],
-        ...chartTheme.datasetStyles.bar
-      },
-      {
-        label: 'KA',
-        data: [45, 49, 60, 71, 46, 45],
-        ...chartTheme.datasetStyles.bar
-      }
-    ]
-  };
+  const [frequencyData, setFrequencyData] = useState({
+    labels: [],
+    datasets: []
+  });
+
+  useEffect(() => {
+    fetch('/overview')
+      .then(response => response.json())
+      .then(data => {
+        setFrequencyData({
+          labels: data.dates,
+          datasets: [
+            {
+              label: 'CX',
+              data: data.CX_weekly_fq,
+              ...chartTheme.datasetStyles.bar
+            },
+            {
+              label: 'All',
+              data: data.ALL_weekly_fq,
+              ...chartTheme.datasetStyles.bar
+            }
+          ]
+        });
+      })
+      .catch(error => console.error('Failed to fetch data:', error));
+  }, []);
 
   const delayData = {
     labels: ['0-15', '15-30', '30-60', '60-120', '120+'],
@@ -102,7 +115,7 @@ function Home() {
         <div className="chart-container">
           <h2>Flight Frequency by Carrier</h2>
           <div className="chart">
-            <Bar data={frequencyData} options={chartTheme.defaultOptions} />
+            <Line data={frequencyData} options={chartTheme.defaultOptions} />
           </div>
         </div>
 
