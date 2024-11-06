@@ -66,6 +66,7 @@
     padding: 1.5rem;
     box-shadow: var(--box-shadow);
     border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
   }
   
   .metrics-container h2 {
