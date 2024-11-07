@@ -231,30 +231,31 @@ function Home() {
 
   return (
     <div className="detail-wrapper">
-      <h1 className="dashboard-title">Air Cargo Operations Weekly Overview</h1>
-      
-      <div className="filters-container">
-        <div className="filter">
-          <select 
-            value={filters.origin}
-            onChange={(e) => handleFilterChange('origin', e.target.value)}
-          >
-            <option value="">All Origins</option>
-            {stations.origins.map(origin => (
-              <option key={origin} value={origin}>{origin}</option>
-            ))}
-          </select>
-        </div>
-        <div className="filter">
-          <select 
-            value={filters.destination}
-            onChange={(e) => handleFilterChange('destination', e.target.value)}
-          >
-            <option value="">All Destinations</option>
-            {stations.destinations.map(dest => (
-              <option key={dest} value={dest}>{dest}</option>
-            ))}
-          </select>
+      <div className="dashboard-header">
+        <h1 className="dashboard-title">Air Cargo Operations Weekly Overview</h1>
+        <div className="filters-container">
+          <div className="filter">
+            <select 
+              value={filters.origin}
+              onChange={(e) => handleFilterChange('origin', e.target.value)}
+            >
+              <option value="">All Origins</option>
+              {stations.origins.map(origin => (
+                <option key={origin} value={origin}>{origin}</option>
+              ))}
+            </select>
+          </div>
+          <div className="filter">
+            <select 
+              value={filters.destination}
+              onChange={(e) => handleFilterChange('destination', e.target.value)}
+            >
+              <option value="">All Destinations</option>
+              {stations.destinations.map(dest => (
+                <option key={dest} value={dest}>{dest}</option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
       
@@ -278,7 +279,7 @@ function Home() {
           </div>
         </div>
       </div>
-
+  
       <div className="dashboard-grid">
         <div className="chart-container">
           <h2>Flight Frequency by Carrier</h2>
@@ -286,21 +287,21 @@ function Home() {
             <Line data={frequencyData} options={chartTheme.defaultOptions} />
           </div>
         </div>
-
+  
         <div className="chart-container">
           <h2>Performance (Cancelled or Delayed)</h2>
           <div className="chart">
             <Line data={performanceData} options={chartTheme.defaultOptions} />
           </div>
         </div>
-
+  
         <div className="chart-container">
           <h2>Weekly Top 10</h2>
           <div className="chart">
             <DataTable data={top10Data} />
           </div>
         </div>
-
+  
         <div className="chart-container">
           <h2>Weekly Top 5</h2>
           <div className="chart">

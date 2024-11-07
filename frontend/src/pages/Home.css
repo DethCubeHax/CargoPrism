@@ -250,3 +250,40 @@
   .filter select option {
     padding: 8px;
   }
+
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-title {
+    margin: 0;
+    flex-shrink: 0;
+  }
+  
+  .filters-container {
+    display: flex;
+    gap: 15px;
+    margin-left: 20px;
+  }
+  
+  .filter select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 150px;
+    background-color: white;
+  }
+  
+  .filter select:focus {
+    outline: none;
+    border-color: #006564;
+  }
+  
+  .filter select option {
+    padding: 8px;
+  }
