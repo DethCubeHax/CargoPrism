@@ -1,5 +1,6 @@
 import React from 'react';
 import { Line, Bar, Doughnut } from 'react-chartjs-2';
+import { useState, useEffect } from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -28,6 +29,29 @@ ChartJS.register(
 );
 
 function MarketAnalysis() {
+  const [metrics, setMetrics] = useState({
+    market_share: { value: 0, change: 0 },
+    routes_served: { value: 0, change: 0 },
+    competitor_count: { value: 0, change: 0 },
+    market_growth: { value: 0 }
+  });
+
+  useEffect(() => {
+    fetch('http://localhost:8000/market-metrics', {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        setMetrics(data);
+      })
+      .catch(error => {
+        console.error('Error fetching market metrics:', error);
+      });
+  }, []);
+
   const marketShareData = {
     labels: ['CX', 'KA', 'SQ', 'TG', 'VN', 'Others'],
     datasets: [{
@@ -104,23 +128,30 @@ function MarketAnalysis() {
       <div className="market-metrics">
         <div className="metric-card">
           <h3>Market Share</h3>
-          <p className="metric-value">35.2%</p>
-          <p className="metric-change positive">+2.1%</p>
+          <p className="metric-value">{metrics.market_share.value}%</p>
+          <p className={`metric-change ${metrics.market_share.change >= 0 ? 'positive' : 'negative'}`}>
+            {metrics.market_share.change >= 0 ? '+' : ''}{metrics.market_share.change}%
+          </p>
         </div>
         <div className="metric-card">
           <h3>Routes Served</h3>
-          <p className="metric-value">28</p>
-          <p className="metric-change positive">+2</p>
+          <p className="metric-value">{metrics.routes_served.value}</p>
+          <p className={`metric-change ${metrics.routes_served.change >= 0 ? 'positive' : 'negative'}`}>
+            {metrics.routes_served.change >= 0 ? '+' : ''}{metrics.routes_served.change}
+          </p>
         </div>
         <div className="metric-card">
           <h3>Competitor Count</h3>
-          <p className="metric-value">12</p>
-          <p className="metric-change neutral">No change</p>
+          <p className="metric-value">{metrics.competitor_count.value}</p>
+          <p className={`metric-change ${metrics.competitor_count.change === 0 ? 'neutral' : 
+            metrics.competitor_count.change > 0 ? 'negative' : 'positive'}`}>
+            {metrics.competitor_count.change === 0 ? 'No change' : 
+             `${metrics.competitor_count.change > 0 ? '+' : ''}${metrics.competitor_count.change}`}
+          </p>
         </div>
         <div className="metric-card">
           <h3>Market Growth</h3>
-          <p className="metric-value">8.5%</p>
-          <p className="metric-change positive">+1.2%</p>
+          <p className="metric-value">{metrics.market_growth.value}%</p>
         </div>
       </div>
 
