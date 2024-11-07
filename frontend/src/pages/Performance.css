@@ -105,3 +105,81 @@
       grid-column: auto;
     }
   }
+
+  .schedule-changes {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .schedule-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+  }
+  
+  .schedule-table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .schedule-table td {
+    font-size: 0.9rem;
+  }
+  
+  .schedule-changes h2 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .pagination-row {
+    background-color: #f8f9fa;
+    border-bottom: none !important;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    gap: 15px;
+  }
+  
+  .pagination-button {
+    padding: 6px 12px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  
+  .pagination-button:hover:not(:disabled) {
+    background-color: #f0f0f0;
+    border-color: #c0c0c0;
+  }
+  
+  .pagination-button:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    color: #999;
+  }
+  
+  .pagination-info {
+    font-size: 0.9rem;
+    color: #666;
+  }

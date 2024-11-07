@@ -234,3 +234,119 @@ def market_metrics():
                 "value": round(market_growth, 1)
             }
         }
+        
+@app.get("/performance")
+def performance():
+    df = update_flights_database()
+    
+    if not df.empty:
+        df['date'] = pd.to_datetime(df['date'])
+        
+        # Get current month and last month
+        latest_date = df['date'].max()
+        current_month_start = latest_date - timedelta(days=30)
+        last_month_start = current_month_start - timedelta(days=30)
+        
+        # Filter for current and last month
+        current_df = df[df['date'] >= current_month_start]
+        last_month_df = df[(df['date'] >= last_month_start) & (df['date'] < current_month_start)]
+        
+        # Filter for CX flights
+        current_cx = current_df[current_df['airline'] == 'CPA']
+        last_month_cx = last_month_df[last_month_df['airline'] == 'CPA']
+        
+        # Average Daily Flights
+        current_daily_avg = len(current_cx) / 30
+        last_daily_avg = len(last_month_cx) / 30
+        daily_flights_change = ((current_daily_avg - last_daily_avg) / last_daily_avg * 100) if last_daily_avg > 0 else 0
+        
+        # On-time Performance (flights that are not delayed)
+        current_ontime = len(current_cx[current_cx['status'] != 'Delayed'])
+        current_ontime_rate = (current_ontime / len(current_cx) * 100) if len(current_cx) > 0 else 0
+        
+        last_ontime = len(last_month_cx[last_month_cx['status'] != 'Delayed'])
+        last_ontime_rate = (last_ontime / len(last_month_cx) * 100) if len(last_month_cx) > 0 else 0
+        ontime_change = current_ontime_rate - last_ontime_rate
+        
+        # Average Delay Time (assuming 60 min for delayed flights)
+        delay_minutes = 60
+        current_delayed_flights = len(current_cx[current_cx['status'] == 'Delayed'])
+        last_delayed_flights = len(last_month_cx[last_month_cx['status'] == 'Delayed'])
+        
+        current_avg_delay = (current_delayed_flights * delay_minutes) / len(current_cx) if len(current_cx) > 0 else 0
+        last_avg_delay = (last_delayed_flights * delay_minutes) / len(last_month_cx) if len(last_month_cx) > 0 else 0
+        delay_change = current_avg_delay - last_avg_delay
+        
+        # Completion Factor (non-cancelled flights)
+        current_completed = len(current_cx[current_cx['status'] != 'Cancelled'])
+        current_completion = (current_completed / len(current_cx) * 100) if len(current_cx) > 0 else 0
+        
+        last_completed = len(last_month_cx[last_month_cx['status'] != 'Cancelled'])
+        last_completion = (last_completed / len(last_month_cx) * 100) if len(last_month_cx) > 0 else 0
+        completion_change = current_completion - last_completion
+
+        # Schedule Changes Analysis - Tracking Cancellations and Resumptions
+        competitor_df = df[df['airline'] != 'CPA'].copy()
+        competitor_df = competitor_df[competitor_df['date'] >= current_month_start]  # Limit to last month
+        schedule_changes = []
+        
+        # Group by flight number and find cancelled flights
+        for flight_no in competitor_df['flight_no'].unique():
+            flight_data = competitor_df[competitor_df['flight_no'] == flight_no].sort_values('date')
+            
+            # Find cancellations and next scheduled flight
+            for idx, row in flight_data.iterrows():
+                if row['status'] == 'Cancelled':
+                    # Look for the next scheduled occurrence of this flight
+                    next_flights = flight_data[flight_data['date'] > row['date']]
+                    if not next_flights.empty:
+                        next_scheduled = next_flights.iloc[0]
+                        schedule_changes.append({
+                            "date": row['date'].strftime('%Y-%m-%d'),
+                            "flight_no": flight_no,
+                            "airline": row['airline'],
+                            "original_status": "Cancelled",
+                            "new_status": f"Resumed on {next_scheduled['date'].strftime('%Y-%m-%d')}"
+                        })
+        
+        # Sort schedule changes by date
+        schedule_changes.sort(key=lambda x: x['date'], reverse=True)
+        
+        # Prepare the data for return
+        if schedule_changes:
+            schedule_data = [
+                [
+                    change['date'],
+                    change['flight_no'],
+                    change['airline'],
+                    change['original_status'],
+                    change['new_status']
+                ] for change in schedule_changes
+            ]
+        else:
+            schedule_data = ["None"]
+
+        return {
+            "metrics": {
+                "daily_flights": {
+                    "value": round(current_daily_avg, 1),
+                    "change": round(daily_flights_change, 1)
+                },
+                "ontime_performance": {
+                    "value": round(current_ontime_rate, 1),
+                    "change": round(ontime_change, 1)
+                },
+                "avg_delay": {
+                    "value": round(current_avg_delay, 1),
+                    "change": round(delay_change, 1)
+                },
+                "completion_factor": {
+                    "value": round(current_completion, 1),
+                    "change": round(completion_change, 1)
+                }
+            },
+            "schedule_changes": {
+                "columns": ["Date", "Flight No", "Airline", "Original Status", "New Status"],
+                "data": schedule_data
+            }
+        }
