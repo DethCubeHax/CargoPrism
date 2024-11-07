@@ -33,9 +33,38 @@ function DataTable({ data }) {
   const sortedDatasets = [...data.datasets].reverse();
   const totalPages = Math.ceil(sortedDatasets.length / rowsPerPage);
 
+  const sortRowByPercentage = (row) => {
+    const date = row[0];
+    const airlines = row.slice(1);
+    
+    // Extract percentages and airlines
+    const airlinesWithPercentages = airlines.map(airline => {
+      if (!airline) return { original: '', percentage: -1 };
+      const match = airline.match(/(\w+)\((\d+)%\)/);
+      if (match) {
+        return {
+          original: airline,
+          percentage: parseInt(match[2])
+        };
+      }
+      return { original: airline, percentage: -1 };
+    });
+
+    // Sort by percentage
+    airlinesWithPercentages.sort((a, b) => b.percentage - a.percentage);
+
+    // Return sorted row with date
+    return [date, ...airlinesWithPercentages.map(item => item.original)];
+  };
+
   const getCurrentPageData = () => {
     const start = currentPage * rowsPerPage;
-    return sortedDatasets.slice(start, start + rowsPerPage);
+    return sortedDatasets
+      .slice(start, start + rowsPerPage)
+      .map(row => {
+        const rowData = row.slice(0, 6);
+        return sortRowByPercentage(rowData);
+      });
   };
 
   return (
@@ -53,9 +82,8 @@ function DataTable({ data }) {
         </thead>
         <tbody>
           {getCurrentPageData().map((row, index) => {
-            const rowData = row.slice(0, 6);
-            const date = rowData[0];
-            const top5 = rowData.slice(1);
+            const date = row[0];
+            const top5 = row.slice(1);
             
             return (
               <tr key={index}>
