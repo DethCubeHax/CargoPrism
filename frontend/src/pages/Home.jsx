@@ -243,7 +243,7 @@ function Home() {
         </div>
 
         <div className="chart-container">
-          <h2>Daily Cancellation Rate</h2>
+          <h2>Weely Top 5</h2>
           <div className="chart">
           <DataTable data={top5Data} />
           </div>
