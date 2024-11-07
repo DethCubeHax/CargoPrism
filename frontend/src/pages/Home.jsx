@@ -50,8 +50,8 @@ function DataTable({ data }) {
       return { original: airline, percentage: -1 };
     });
 
-    // Sort by percentage
-    airlinesWithPercentages.sort((a, b) => b.percentage - a.percentage);
+    // Sort by percentage in ascending order (changed from b.percentage - a.percentage)
+    airlinesWithPercentages.sort((a, b) => a.percentage - b.percentage);
 
     // Return sorted row with date
     return [date, ...airlinesWithPercentages.map(item => item.original)];
