@@ -189,11 +189,15 @@ function Home() {
         {
           label: 'CX',
           data: data.CX_weekly_cod_percentage,
+          backgroundColor: 'rgb(0, 101, 100)',
+          borderColor: 'rgb(0, 101, 100)',
           ...chartTheme.datasetStyles.bar
         },
         {
           label: 'All',
           data: data.ALL_weekly_cod_percentage,
+          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+          borderColor: 'rgba(255, 99, 132, 1)',
           ...chartTheme.datasetStyles.bar
         }
       ]
@@ -262,19 +266,19 @@ function Home() {
       <div className="metrics-container">
         <div className="metrics">
           <div className="metric-item">
-            <h3>Total Flights</h3>
+            <h3>Cathay's Total Flights</h3>
             <p className="metric-value">{metrics.total_flights}</p>
           </div>
           <div className="metric-item">
-            <h3>On-time Performance</h3>
+            <h3>Cathay's On-time Performance</h3>
             <p className="metric-value">{metrics.ontime_performance}%</p>
           </div>
           <div className="metric-item">
-            <h3>Active Routes</h3>
+            <h3>Cathay's Active Routes</h3>
             <p className="metric-value">{metrics.active_routes}</p>
           </div>
           <div className="metric-item">
-            <h3>Cancellation Rate</h3>
+            <h3>Cathay's Cancellation Rate</h3>
             <p className="metric-value">{metrics.cancellation_rate}%</p>
           </div>
         </div>
@@ -282,28 +286,28 @@ function Home() {
   
       <div className="dashboard-grid">
         <div className="chart-container">
-          <h2>Flight Frequency by Carrier</h2>
+          <h2>Flight Frequency by Airline</h2>
           <div className="chart">
             <Line data={frequencyData} options={chartTheme.defaultOptions} />
           </div>
         </div>
   
         <div className="chart-container">
-          <h2>Performance (Cancelled or Delayed)</h2>
+          <h2>Percentage of Flights Cancelled or Delayed</h2>
           <div className="chart">
             <Line data={performanceData} options={chartTheme.defaultOptions} />
           </div>
         </div>
   
         <div className="chart-container">
-          <h2>Weekly Top 10</h2>
+          <h2>Weekly Top 5 Airlines by Flight Frequency</h2>
           <div className="chart">
             <DataTable data={top10Data} />
           </div>
         </div>
   
         <div className="chart-container">
-          <h2>Weekly Top 5</h2>
+          <h2>Weekly Top 5 Airlines by Lowest Cancellation and Delay Rates</h2>
           <div className="chart">
             <DataTable data={top5Data} />
           </div>
