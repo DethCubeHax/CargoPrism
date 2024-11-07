@@ -48,7 +48,7 @@ def overview():
         total_cx_flights = len(cx_df)
         
         # Calculate on-time performance
-        ontime_flights = len(cx_df[cx_df['status'] != 'Cancelled'])
+        ontime_flights = len(cx_df[cx_df['status'] != 'Delayed'])
         ontime_percentage = (ontime_flights / total_cx_flights * 100) if total_cx_flights > 0 else 0
         
         # Calculate active routes (unique origin-destination pairs)
@@ -91,7 +91,70 @@ def overview():
         weekly_top_10 = df_split
         weekly_top_10.index = weekly_top_10.index.strftime('%Y-%m-%d')
 
-        # Return all data including new metrics
+        # weekly top 5
+        top_5 = df['airline'].resample('W').apply(lambda x: x.value_counts().head(5).to_dict().keys())
+        top_5 = top_5.reset_index()
+        top_5.columns = ['week', 'top_airlines']
+        top_5 = top_5.explode('top_airlines')
+
+        partial_table = df[['airline','status']]
+        partial_table = partial_table.reset_index()
+        partial_table['date'] = pd.to_datetime(partial_table['date'])
+        partial_table['week'] = partial_table['date'] + pd.to_timedelta(6 - partial_table['date'].dt.weekday, unit='d')
+
+        filtered_df = pd.merge(partial_table, top_5, how='inner', left_on=['week', 'airline'], right_on=['week', 'top_airlines'])
+        filtered_df.drop(columns=['top_airlines'], inplace=True)
+
+        filtered_df['week'] = pd.to_datetime(filtered_df['week'])
+        filtered_df.set_index('week', inplace=True)
+        weekly_top_5 = filtered_df['airline'].resample('W').apply(
+            lambda x: {idx: v for idx, v in x.value_counts().head(5).items()}
+        )
+
+        filtered_df = filtered_df[filtered_df['status'].isin(['Cancelled', 'Delayed'])]
+
+        # Resample and format the output
+        weekly_top_5_cod = filtered_df['airline'].resample('W').apply(
+            lambda x: {idx: v for idx, v in x.value_counts().head(5).items()}
+        )
+
+        # Convert dictionaries to Series
+        weekly_top_5 = pd.Series(weekly_top_5)
+        weekly_top_5_cod = pd.Series(weekly_top_5_cod)
+
+        # Calculate ratios
+        ratios = {}
+
+        for week, airlines in weekly_top_5.items():
+            week_ratios = []
+            cod_airlines = weekly_top_5_cod.get(week, {})
+            
+            # Calculate ratios and convert to formatted string, rounding to integer
+            for airline, count in airlines.items():
+                if airline in cod_airlines:
+                    ratio = round((cod_airlines[airline] / count) * 100)
+                else:
+                    ratio = 0  # Integer representation for consistency
+
+                week_ratios.append(f"{airline}({ratio}%)")
+            
+            # Join all airline ratios into a single string for each week
+            ratios[week] = ', '.join(week_ratios)
+
+        # Create a Pandas Series from the ratios dictionary
+        top5_ratios_series = pd.Series(ratios)
+        # Split the series into a DataFrame
+        df_split = top5_ratios_series.str.split(", ", expand=True)
+
+        # Generate column names based on the number of splits
+        column_names = [f"No.{i}" for i in range(1, df_split.shape[1] + 1)]
+        df_split.columns = column_names
+        weekly_top_5 = df_split
+        # Format the index to be date strings
+        weekly_top_5.index = weekly_top_5.index.strftime('%Y-%m-%d')
+
+
+        # Preparing data for JSON serialization
         return {
             "metrics": metrics,
             "dates": cx_weekly_counts.index.strftime('%Y-%m-%d').tolist(),
@@ -99,9 +162,13 @@ def overview():
             "ALL_weekly_fq": all_weekly_counts.tolist(),
             "CX_weekly_cod_percentage": cx_cod_percentage.tolist(),
             "ALL_weekly_cod_percentage": all_cod_percentage.tolist(),
-            "weekly_top_10": weekly_top_10.to_json(orient='split')
-        }
+            # Weekly Top 10 Table
+            "weekly_top_10": weekly_top_10.to_json(orient='split'),
+            # Weekly Top 5 Table
+            "weekly_top_5": weekly_top_5.to_json(orient='split')
 
+        }
+        
 @app.get("/market-metrics")
 def market_metrics():
     df = update_flights_database()
