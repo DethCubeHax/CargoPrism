@@ -104,6 +104,11 @@ function Home() {
     datasets: []
   });
 
+  const [top5Data, setTop5Data] = useState({
+    labels: ['Week', 'No.1', 'No.2', 'No.3', 'No.4', 'No.5'],
+    datasets: []
+  });
+
   useEffect(() => {
     fetch('http://localhost:8000/overview', {
       method: 'GET',
@@ -167,22 +172,28 @@ function Home() {
           labels: columns,
           datasets: formattedData
         });
+
+        // Parse the weekly_top_10 JSON string
+        const top5 = JSON.parse(data.weekly_top_5);
+
+        // Now you can access the columns
+        const top5_columns = ["Date", ...top5.columns];
+
+        // Formatting data by combining dates with data entries
+        const top5_formattedData = top5.index.map((date, index) => {
+          return [date, ...top5.data[index]];
+        });
+
+        setTop5Data({
+          labels: top5_columns,
+          datasets: top5_formattedData
+        });
+
       })
       .catch(error => {
         console.error('Error fetching data:', error);
       });
   }, []);
-
-  const cancellationData = {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-    datasets: [{
-      label: 'Cancellation Rate (%)',
-      data: [2.1, 1.8, 2.5, 1.9, 2.2, 1.5, 1.7],
-      tension: 0.3,
-      fill: true,
-      ...chartTheme.datasetStyles.line
-    }]
-  };
 
   return (
     <div className="detail-wrapper">
@@ -234,7 +245,7 @@ function Home() {
         <div className="chart-container">
           <h2>Daily Cancellation Rate</h2>
           <div className="chart">
-            <Line data={cancellationData} options={chartTheme.defaultOptions} />
+          <DataTable data={top5Data} />
           </div>
         </div>
       </div>
