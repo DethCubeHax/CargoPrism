@@ -30,9 +30,7 @@ function DataTable({ data }) {
   const [currentPage, setCurrentPage] = useState(0);
   const rowsPerPage = 4;
 
-  // Just reverse the array to get correct date order, and use first 5 elements
   const sortedDatasets = [...data.datasets].reverse();
-
   const totalPages = Math.ceil(sortedDatasets.length / rowsPerPage);
 
   const getCurrentPageData = () => {
@@ -55,7 +53,6 @@ function DataTable({ data }) {
         </thead>
         <tbody>
           {getCurrentPageData().map((row, index) => {
-            // Just take the first 6 elements (date + top 5)
             const rowData = row.slice(0, 6);
             const date = rowData[0];
             const top5 = rowData.slice(1);
@@ -102,6 +99,17 @@ function Home() {
     cancellation_rate: 0
   });
 
+  const [filters, setFilters] = useState({
+    origin: '',
+    destination: ''
+  });
+
+  const [stations, setStations] = useState({
+    origins: [],
+    destinations: []
+  });
+
+  const [rawData, setRawData] = useState(null);
   const [frequencyData, setFrequencyData] = useState({
     labels: [],
     datasets: []
@@ -122,96 +130,133 @@ function Home() {
     datasets: []
   });
 
-  useEffect(() => {
-    fetch('http://localhost:8000/overview', {
+  const fetchData = (currentFilters) => {
+    let url = 'http://localhost:8000/overview';
+    const params = new URLSearchParams();
+    if (currentFilters.origin) params.append('origin', currentFilters.origin);
+    if (currentFilters.destination) params.append('destination', currentFilters.destination);
+    if (params.toString()) url += `?${params.toString()}`;
+
+    fetch(url, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
       },
     })
-      .then(response => {
-        console.log('Raw Response:', response);
-        return response.json();
-      })
+      .then(response => response.json())
       .then(data => {
-        console.log('Received data:', data);
-        setMetrics(data.metrics);
-        setFrequencyData({
-          labels: data.dates,
-          datasets: [
-            {
-              label: 'CX',
-              data: data.CX_weekly_fq,
-              backgroundColor: 'rgb(0, 101, 100)',
-              borderColor: 'rgb(0, 101, 100)',
-              ...chartTheme.datasetStyles.bar
-            },
-            {
-              label: 'All',
-              data: data.ALL_weekly_fq,
-              backgroundColor: 'rgba(255, 99, 132, 0.5)',
-              borderColor: 'rgba(255, 99, 132, 1)',
-              ...chartTheme.datasetStyles.bar
-            }
-          ]
-        });
-        setPerformanceData({
-          labels: data.dates,
-          datasets: [
-            {
-              label: 'CX',
-              data: data.CX_weekly_cod_percentage,
-              ...chartTheme.datasetStyles.bar
-            },
-            {
-              label: 'All',
-              data: data.ALL_weekly_cod_percentage,
-              ...chartTheme.datasetStyles.bar
-            }
-          ]
-        });
-
-        // Parse the weekly_top_10 JSON string
-        const top10 = JSON.parse(data.weekly_top_10);
-        
-        // Now you can access the columns
-        const columns = ["Date", ...top10.columns];
-
-        // Formatting data by combining dates with data entries
-        const formattedData = top10.index.map((date, index) => {
-          return [date, ...top10.data[index]];
-        });
-
-        setTop10Data({
-          labels: columns,
-          datasets: formattedData
-        });
-
-        // Parse the weekly_top_10 JSON string
-        const top5 = JSON.parse(data.weekly_top_5);
-
-        // Now you can access the columns
-        const top5_columns = ["Date", ...top5.columns];
-
-        // Formatting data by combining dates with data entries
-        const top5_formattedData = top5.index.map((date, index) => {
-          return [date, ...top5.data[index]];
-        });
-
-        setTop5Data({
-          labels: top5_columns,
-          datasets: top5_formattedData
-        });
-
+        setRawData(data);
+        setStations(data.stations);
+        updateFilteredData(data);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
       });
+  };
+
+  useEffect(() => {
+    fetchData(filters);
   }, []);
+
+  const updateFilteredData = (data) => {
+    if (!data) return;
+
+    setMetrics(data.metrics);
+
+    setFrequencyData({
+      labels: data.dates,
+      datasets: [
+        {
+          label: 'CX',
+          data: data.CX_weekly_fq,
+          backgroundColor: 'rgb(0, 101, 100)',
+          borderColor: 'rgb(0, 101, 100)',
+          ...chartTheme.datasetStyles.bar
+        },
+        {
+          label: 'All',
+          data: data.ALL_weekly_fq,
+          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          ...chartTheme.datasetStyles.bar
+        }
+      ]
+    });
+
+    setPerformanceData({
+      labels: data.dates,
+      datasets: [
+        {
+          label: 'CX',
+          data: data.CX_weekly_cod_percentage,
+          ...chartTheme.datasetStyles.bar
+        },
+        {
+          label: 'All',
+          data: data.ALL_weekly_cod_percentage,
+          ...chartTheme.datasetStyles.bar
+        }
+      ]
+    });
+
+    const top10 = JSON.parse(data.weekly_top_10);
+    const columns = ["Date", ...top10.columns];
+    const formattedTop10Data = top10.index.map((date, index) => {
+      return [date, ...top10.data[index]];
+    });
+    setTop10Data({
+      labels: columns,
+      datasets: formattedTop10Data
+    });
+
+    const top5 = JSON.parse(data.weekly_top_5);
+    const top5_columns = ["Date", ...top5.columns];
+    const formattedTop5Data = top5.index.map((date, index) => {
+      return [date, ...top5.data[index]];
+    });
+    setTop5Data({
+      labels: top5_columns,
+      datasets: formattedTop5Data
+    });
+  };
+
+  const handleFilterChange = (filterType, value) => {
+    const newFilters = {
+      ...filters,
+      [filterType]: value
+    };
+    setFilters(newFilters);
+    fetchData(newFilters);
+  };
 
   return (
     <div className="detail-wrapper">
       <h1 className="dashboard-title">Air Cargo Operations Weekly Overview</h1>
+      
+      <div className="filters-container">
+        <div className="filter">
+          <select 
+            value={filters.origin}
+            onChange={(e) => handleFilterChange('origin', e.target.value)}
+          >
+            <option value="">All Origins</option>
+            {stations.origins.map(origin => (
+              <option key={origin} value={origin}>{origin}</option>
+            ))}
+          </select>
+        </div>
+        <div className="filter">
+          <select 
+            value={filters.destination}
+            onChange={(e) => handleFilterChange('destination', e.target.value)}
+          >
+            <option value="">All Destinations</option>
+            {stations.destinations.map(dest => (
+              <option key={dest} value={dest}>{dest}</option>
+            ))}
+          </select>
+        </div>
+      </div>
       
       <div className="metrics-container">
         <div className="metrics">
@@ -257,9 +302,9 @@ function Home() {
         </div>
 
         <div className="chart-container">
-          <h2>Weely Top 5</h2>
+          <h2>Weekly Top 5</h2>
           <div className="chart">
-          <DataTable data={top5Data} />
+            <DataTable data={top5Data} />
           </div>
         </div>
       </div>

@@ -31,34 +31,58 @@ def hkia():
         }
 
 @app.get("/overview")
-def overview():
+def overview(origin: str = None, destination: str = None):
     df = update_flights_database()
     
     if not df.empty:
         df['date'] = pd.to_datetime(df['date'])
         
+        # Get CX flights for station lists
+        cx_df = df[df['airline'] == 'CPA']
+        
+        # Get station lists based on filters
+        if origin:
+            # If origin is selected, get only destinations that CX flies to from this origin
+            possible_destinations = sorted(cx_df[cx_df['origin'] == origin]['destination'].unique().tolist())
+            possible_origins = [origin]
+        elif destination:
+            # If destination is selected, get only origins that CX flies from to this destination
+            possible_origins = sorted(cx_df[cx_df['destination'] == destination]['origin'].unique().tolist())
+            possible_destinations = [destination]
+        else:
+            # If no filters, get all CX origins and destinations
+            possible_origins = sorted(cx_df['origin'].unique().tolist())
+            possible_destinations = sorted(cx_df['destination'].unique().tolist())
+        
         # Filter for last month only
         last_month = df['date'].max() - timedelta(days=30)
         df_month = df[df['date'] >= last_month]
         
-        # Filter for CX flights only
-        cx_df = df_month[df_month['airline'] == 'CPA']
+        # Apply route filters if provided
+        if origin:
+            df_month = df_month[df_month['origin'] == origin]
+        if destination:
+            df_month = df_month[df_month['destination'] == destination]
         
-        # Calculate metrics
-        total_cx_flights = len(cx_df)
+        # Filter for CX flights only for metrics
+        cx_df_month = df_month[df_month['airline'] == 'CPA']
         
-        # Calculate on-time performance
-        ontime_flights = len(cx_df[cx_df['status'] != 'Delayed'])
-        ontime_percentage = (ontime_flights / total_cx_flights * 100) if total_cx_flights > 0 else 0
+        # Calculate metrics with filtered data
+        total_cx_flights = len(cx_df_month)
         
-        # Calculate active routes (unique origin-destination pairs)
-        active_routes = len(cx_df[['origin', 'destination']].drop_duplicates())
+        if total_cx_flights > 0:
+            ontime_flights = len(cx_df_month[cx_df_month['status'] != 'Delayed'])
+            ontime_percentage = (ontime_flights / total_cx_flights * 100)
+            
+            active_routes = len(cx_df_month[['origin', 'destination']].drop_duplicates())
+            
+            cancelled_flights = len(cx_df_month[cx_df_month['status'] == 'Cancelled'])
+            cancellation_rate = (cancelled_flights / total_cx_flights * 100)
+        else:
+            ontime_percentage = 0
+            active_routes = 0
+            cancellation_rate = 0
         
-        # Calculate cancellation rate
-        cancelled_flights = len(cx_df[cx_df['status'] == 'Cancelled'])
-        cancellation_rate = (cancelled_flights / total_cx_flights * 100) if total_cx_flights > 0 else 0
-        
-        # Add these metrics to a dictionary
         metrics = {
             "total_flights": total_cx_flights,
             "ontime_performance": round(ontime_percentage, 1),
@@ -67,22 +91,22 @@ def overview():
         }
         
         # Set index for existing calculations
-        df.set_index('date', inplace=True)
+        df_month.set_index('date', inplace=True)
         
         # Resampling and calculating weekly frequency
-        cx_weekly_counts = df[df['airline'] == 'CPA'].resample('W').size()
-        all_weekly_counts = df.resample('W').size()
+        cx_weekly_counts = df_month[df_month['airline'] == 'CPA'].resample('W').size()
+        all_weekly_counts = df_month.resample('W').size()
 
-        # weekly perfomance: cod (cancelled or delayed) flights
-        condition_cx_cod = (df['airline'] == 'CPA') & (df['status'].isin(['Cancelled', 'Delayed']))
-        cx_weekly_cod_flights = df[condition_cx_cod].resample('W').size()
+        # weekly performance: cod (cancelled or delayed) flights
+        condition_cx_cod = (df_month['airline'] == 'CPA') & (df_month['status'].isin(['Cancelled', 'Delayed']))
+        cx_weekly_cod_flights = df_month[condition_cx_cod].resample('W').size()
         cx_cod_percentage = ((cx_weekly_cod_flights / cx_weekly_counts.replace(0, pd.NA)) * 100).fillna(0)
 
-        weekly_cod_flights = df[df['status'].isin(['Cancelled', 'Delayed'])].resample('W').size()
+        weekly_cod_flights = df_month[df_month['status'].isin(['Cancelled', 'Delayed'])].resample('W').size()
         all_cod_percentage = ((weekly_cod_flights/all_weekly_counts.replace(0, pd.NA))*100).fillna(0)
 
         # weekly top 10
-        weekly_top_10 = df['airline'].resample('W').apply(
+        weekly_top_10 = df_month['airline'].resample('W').apply(
             lambda x: ", ".join(f"{idx}({v})" for idx, v in x.value_counts().head(10).items())
         )
         df_split = weekly_top_10.str.split(", ", expand=True)
@@ -92,12 +116,12 @@ def overview():
         weekly_top_10.index = weekly_top_10.index.strftime('%Y-%m-%d')
 
         # weekly top 5
-        top_5 = df['airline'].resample('W').apply(lambda x: x.value_counts().head(5).to_dict().keys())
+        top_5 = df_month['airline'].resample('W').apply(lambda x: x.value_counts().head(5).to_dict().keys())
         top_5 = top_5.reset_index()
         top_5.columns = ['week', 'top_airlines']
         top_5 = top_5.explode('top_airlines')
 
-        partial_table = df[['airline','status']]
+        partial_table = df_month[['airline','status']]
         partial_table = partial_table.reset_index()
         partial_table['date'] = pd.to_datetime(partial_table['date'])
         partial_table['week'] = partial_table['date'] + pd.to_timedelta(6 - partial_table['date'].dt.weekday, unit='d')
@@ -129,16 +153,14 @@ def overview():
             week_ratios = []
             cod_airlines = weekly_top_5_cod.get(week, {})
             
-            # Calculate ratios and convert to formatted string, rounding to integer
             for airline, count in airlines.items():
                 if airline in cod_airlines:
                     ratio = round((cod_airlines[airline] / count) * 100)
                 else:
-                    ratio = 0  # Integer representation for consistency
+                    ratio = 0
 
                 week_ratios.append(f"{airline}({ratio}%)")
             
-            # Join all airline ratios into a single string for each week
             ratios[week] = ', '.join(week_ratios)
 
         # Create a Pandas Series from the ratios dictionary
@@ -153,8 +175,6 @@ def overview():
         # Format the index to be date strings
         weekly_top_5.index = weekly_top_5.index.strftime('%Y-%m-%d')
 
-
-        # Preparing data for JSON serialization
         return {
             "metrics": metrics,
             "dates": cx_weekly_counts.index.strftime('%Y-%m-%d').tolist(),
@@ -162,11 +182,12 @@ def overview():
             "ALL_weekly_fq": all_weekly_counts.tolist(),
             "CX_weekly_cod_percentage": cx_cod_percentage.tolist(),
             "ALL_weekly_cod_percentage": all_cod_percentage.tolist(),
-            # Weekly Top 10 Table
             "weekly_top_10": weekly_top_10.to_json(orient='split'),
-            # Weekly Top 5 Table
-            "weekly_top_5": weekly_top_5.to_json(orient='split')
-
+            "weekly_top_5": weekly_top_5.to_json(orient='split'),
+            "stations": {
+                "origins": possible_origins,
+                "destinations": possible_destinations
+            }
         }
         
 @app.get("/market-metrics")
